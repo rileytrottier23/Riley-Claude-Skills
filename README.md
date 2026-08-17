@@ -28,7 +28,7 @@ Kept in [`personal/`](./personal) — useful as examples of how much context a s
 
 | Skill | What it does |
 |---|---|
-| [canadian-financial-modeler](./personal/canadian-financial-modeler.md) | Canada-specific personal finance modelling — mortgages, TFSA/RRSP/RESP/FHSA, RSU tax treatment, HELOC math, rental property analysis. |
+| [canadian-financial-modeler](./personal/canadian-financial-modeler.md) | Canada-specific personal finance modelling — mortgages, TFSA/RRSP/RESP/FHSA, RSU tax treatment, HEMOC math, rental property analysis. |
 | [chess-coach](./personal/chess-coach.md) | Practical chess coaching for the 700–1200 Elo range — tactics, openings, endgames, game analysis. |
 | [french-tutor](./personal/french-tutor.md) | French practice with an emphasis on Quebec French, for an anglophone parent in a bilingual household. |
 
@@ -45,4 +45,6 @@ The description in the frontmatter does more work than the body. It is the only 
 ## License
 
 MIT — see [LICENSE](./LICENSE).
+## Related projects
 
+- [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server) — a reference MCP server implementation demonstrating agent tool and permissioning design, extracted from a personal journaling app.
