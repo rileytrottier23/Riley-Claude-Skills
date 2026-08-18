@@ -32,10 +32,14 @@ Kept in [`personal/`](./personal) — useful as examples of how much context a s
 | [chess-coach](./personal/chess-coach.md) | Practical chess coaching for the 700–1200 Elo range — tactics, openings, endgames, game analysis. |
 | [french-tutor](./personal/french-tutor.md) | French practice with an emphasis on Quebec French, for an anglophone parent in a bilingual household. |
 
+## Vendored: Anthropic example skills
+
+[`anthropic/`](./anthropic) holds 13 skills pulled from [anthropics/skills](https://github.com/anthropics/skills), pinned to a commit so I can diff them when upstream moves. They are folders rather than single files — `SKILL.md` plus scripts and assets — so copy the whole directory. They are Apache 2.0, not MIT; see [`anthropic/README.md`](./anthropic/README.md).
+
 ## Using them
 
 1. Copy the contents of the skill file you want.
-2. Add it as a Skill in your Claude Project, or drop it in your `skills/` directory for Claude Code.
+2. Add it as a Skill in your Claude Project, or drop it in your `skills/` directory for Claude Code. (For the folder-shaped skills in `anthropic/`, copy the whole directory instead.)
 3. Claude triggers it automatically based on the description in its frontmatter — you do not need to invoke it by name.
 
 ## A note on writing your own
@@ -44,7 +48,7 @@ The description in the frontmatter does more work than the body. It is the only 
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+MIT — see [LICENSE](./LICENSE). Excludes [`anthropic/`](./anthropic), which is Apache 2.0 and carries its own per-skill license files.
 ## Related projects
 
 - [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server) — a reference MCP server implementation demonstrating agent tool and permissioning design, extracted from a personal journaling app.
