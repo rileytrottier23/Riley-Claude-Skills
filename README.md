@@ -36,6 +36,17 @@ Kept in [`personal/`](./personal) — useful as examples of how much context a s
 
 [`anthropic/`](./anthropic) holds 13 skills pulled from [anthropics/skills](https://github.com/anthropics/skills), pinned to a commit so I can diff them when upstream moves. They are folders rather than single files — `SKILL.md` plus scripts and assets — so copy the whole directory. They are Apache 2.0, not MIT; see [`anthropic/README.md`](./anthropic/README.md).
 
+## Third-party skills
+
+[`third-party/`](./third-party) holds skills by other people, vendored so they are pinned and available without hunting for the source. Every folder credits its author, keeps its original licence, and records the upstream commit.
+
+| Collection | Author | Skills | License |
+|---|---|---|---|
+| [deanpeters-product-manager-skills](./third-party/deanpeters-product-manager-skills) | Dean Peters (Productside) | 12 | CC BY-NC-SA 4.0 |
+| [digidai-product-manager-skills](./third-party/digidai-product-manager-skills) | Gene Dai | 1 (large) | CC BY-NC-SA 4.0 |
+
+Both are NonCommercial — that restricts how you *use* them, not this repo hosting them. See [`third-party/README.md`](./third-party/README.md).
+
 ## Using them
 
 1. Copy the contents of the skill file you want.
@@ -48,7 +59,7 @@ The description in the frontmatter does more work than the body. It is the only 
 
 ## License
 
-MIT — see [LICENSE](./LICENSE). Excludes [`anthropic/`](./anthropic), which is Apache 2.0 and carries its own per-skill license files.
+MIT — see [LICENSE](./LICENSE). Applies to my own skills only. [`anthropic/`](./anthropic) is Apache 2.0 and [`third-party/`](./third-party) is CC BY-NC-SA 4.0; both carry their own license files, which govern.
 ## Related projects
 
 - [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server) — a reference MCP server implementation demonstrating agent tool and permissioning design, extracted from a personal journaling app.
