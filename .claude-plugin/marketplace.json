@@ -1,0 +1,48 @@
+{
+  "name": "riley-claude-skills",
+  "owner": {
+    "name": "Riley Trottier",
+    "url": "https://github.com/rileytrottier23"
+  },
+  "metadata": {
+    "description": "Riley's skills library: PM and personal skills, plus vendored collections from Anthropic, Dean Peters, and Gene Dai.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "riley-pm-skills",
+      "description": "Riley's own product-management skills: PRD and spec writing, stakeholder decks, competitive research reports.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/"]
+    },
+    {
+      "name": "riley-personal-skills",
+      "description": "Riley's personal skills: Canadian personal-finance modelling, chess coaching, and Quebec French tutoring.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./personal/"]
+    },
+    {
+      "name": "anthropic-example-skills",
+      "description": "13 example skills from anthropics/skills (Apache 2.0): art and design, frontend, MCP building, internal comms, web artifacts, webapp testing, and more.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./anthropic/"]
+    },
+    {
+      "name": "pm-skills-deanpeters",
+      "description": "12 product-management skills by Dean Peters (Productside), CC BY-NC-SA 4.0: discovery, JTBD, prioritization, roadmapping, PoL probes, user stories.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./third-party/deanpeters-product-manager-skills/"]
+    },
+    {
+      "name": "pm-skills-digidai",
+      "description": "Gene Dai's product-manager-skills (CC BY-NC-SA 4.0): SaaS metrics diagnosis, PRD critique, PLG growth strategy, PM career coaching.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./third-party/digidai-product-manager-skills"]
+    }
+  ]
+}
