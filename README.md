@@ -45,9 +45,9 @@ These are the ones that made it to stage three. Keeping them in git means I can 
 
 | Skill | What it does |
 |---|---|
-| [prd-spec-writer](./skills/prd-spec-writer) | Writes PRDs, product specs, feature briefs, and technical design docs — problem framing, success metrics, requirements, open questions. Tuned for agentic AI infrastructure work. |
-| [stakeholder-deck-builder](./skills/stakeholder-deck-builder) | Builds executive and stakeholder decks: narrative arc, exec-ready framing, data-backed storytelling. Outputs slide outlines or full .pptx files. |
-| [competitive-research-report](./skills/competitive-research-report) | Produces structured competitive analysis, market research, and technology landscape reports for senior PM and exec audiences. |
+| [prd-spec-writer](./pm/prd-spec-writer) | Writes PRDs, product specs, feature briefs, and technical design docs — problem framing, success metrics, requirements, open questions. Tuned for agentic AI infrastructure work. |
+| [stakeholder-deck-builder](./pm/stakeholder-deck-builder) | Builds executive and stakeholder decks: narrative arc, exec-ready framing, data-backed storytelling. Outputs slide outlines or full .pptx files. |
+| [competitive-research-report](./pm/competitive-research-report) | Produces structured competitive analysis, market research, and technology landscape reports for senior PM and exec audiences. |
 
 ## Personal skills
 
