@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Riley's skills library: PM and personal skills, plus vendored collections from Anthropic, Dean Peters, and Gene Dai.",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
@@ -18,7 +18,7 @@
     },
     {
       "name": "riley-personal-skills",
-      "description": "Riley's personal skills: Canadian personal-finance modelling, chess coaching, and Quebec French tutoring.",
+      "description": "Riley's personal skills: Canadian personal-finance modelling, chess coaching, Quebec French tutoring, and publishing new skills to this repo.",
       "source": "./",
       "strict": false,
       "skills": ["./personal/"]

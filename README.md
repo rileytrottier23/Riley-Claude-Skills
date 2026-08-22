@@ -4,7 +4,7 @@ The Claude skills I actually use for product work — versioned here rather than
 
 Each skill is a folder containing a `SKILL.md`: an instruction set Claude loads when the skill's description matches what you are asking for. They are written for [Claude Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) and work in Claude Projects, Claude Code, and Cowork.
 
-**This repo is also a plugin marketplace** — 32 skills installable in one step. See [Install](#install) below.
+**This repo is also a plugin marketplace** — 33 skills installable in one step. See [Install](#install) below.
 
 ## Install
 
@@ -24,7 +24,7 @@ Five plugins, install whichever you want:
 | Plugin | Skills | What's in it |
 |---|---|---|
 | `riley-pm-skills` | 3 | My PM skills — PRDs, stakeholder decks, competitive research |
-| `riley-personal-skills` | 3 | Canadian personal finance, chess coaching, French tutoring |
+| `riley-personal-skills` | 4 | Canadian personal finance, chess coaching, French tutoring, skill publishing |
 | `anthropic-example-skills` | 13 | Anthropic's example skills (Apache 2.0) |
 | `pm-skills-deanpeters` | 12 | Dean Peters' PM skills (CC BY-NC-SA 4.0) |
 | `pm-skills-digidai` | 1 | Gene Dai's PM skill pack (CC BY-NC-SA 4.0) |
@@ -58,6 +58,7 @@ Kept in [`personal/`](./personal) — useful as examples of how much context a s
 | [canadian-financial-modeler](./personal/canadian-financial-modeler) | Canada-specific personal finance modelling — mortgages, TFSA/RRSP/RESP/FHSA, RSU tax treatment, HEMOC math, rental property analysis. |
 | [chess-coach](./personal/chess-coach) | Practical chess coaching for the 700–1200 Elo range — tactics, openings, endgames, game analysis. |
 | [french-tutor](./personal/french-tutor) | French practice with an emphasis on Quebec French, for an anglophone parent in a bilingual household. |
+| [publish-skill-to-github](./personal/publish-skill-to-github) | Pushes any new or edited skill to this repo, updates the README counts and tables, bumps the marketplace version, and logs a changelog line. |
 
 ## Vendored: Anthropic example skills
 
