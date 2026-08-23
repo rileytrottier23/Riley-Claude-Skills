@@ -13,9 +13,30 @@ Run it at the end of any session that produced or changed a skill — `skill-cre
 
 Ask first when the skill carries anything that shouldn't be public: client names, internal process detail, credentials, or personal data beyond what `personal/` already holds. The repo is public.
 
-## Preflight: can this session push?
+## Preflight: where am I running?
 
-Read access works anonymously; **write access requires the repo to be in the session's authorized set.** Check before doing any work:
+Two environments, and they fail in completely different ways. Work out which one you are in **first** —
+`git -C <clone> push --dry-run origin main` answers it faster than guessing.
+
+### Local terminal (Claude Code on Riley's machine)
+
+The normal case, and the one to prefer. Bash is Riley's own shell: his git credentials, his network,
+his working copy. If `C:\Users\riley\Riley-Claude-Skills` already exists, work in it directly —
+`git pull` first — rather than cloning a second copy somewhere else.
+
+```bash
+cd /c/Users/riley/Riley-Claude-Skills   # adjust for the shell in use
+git pull
+git push --dry-run origin main
+```
+
+A clean dry run means you can do the whole job yourself: copy the skill in, run the script, commit, push.
+No patches, no handing Riley commands to paste.
+
+### Cloud session (Cowork sandbox)
+
+Bash runs in a container that cannot see Riley's machine. Read access to the repo works anonymously;
+**write access requires the repo to be in the session's authorized set**, and usually it is not.
 
 ```bash
 cd /tmp && rm -rf rcs
@@ -23,12 +44,22 @@ git clone https://github.com/rileytrottier23/Riley-Claude-Skills.git rcs
 cd rcs && git push --dry-run origin main
 ```
 
-If the dry run fails with *"not in this session's authorized repository set"*:
+If that fails with *"not in this session's authorized repository set"*, and an `add_repo` tool exists,
+call it with `access: "push"`. Otherwise fall back, in this order:
 
-1. Do the work locally anyway — the diff is worth showing.
-2. Package the skill as a `.skill` file and deliver it with `SendUserFile`.
-3. Tell Riley the session lacks write access to the repo and that adding it to the session's GitHub sources fixes it. If an `add_repo` tool exists in that session, call it with `access: "push"`.
-4. Offer the patch: `git format-patch` output or the exact commands to run locally.
+1. **If Riley's repo folder is connected** (or he will connect it — offer `device_request_folder_access`),
+   write the changes straight into his working copy and let him run `git add/commit/push`. Note the
+   limits of that bridge: no network from the device side, no deleting files, and git itself cannot run
+   there — `.git/index.lock` is not writable. So fetching anything from another repo is Riley's step,
+   not yours. Preserve the file's existing line endings; his checkout is CRLF and a whole-file ending
+   flip buries the real diff.
+2. **Otherwise** do the work in the container, commit locally, and send `git format-patch` output with
+   `SendUserFile`. Tell him where the file lands and give the exact `git am` line. Verify afterwards that
+   the commits actually reached the remote — a `git push` reporting "everything up-to-date" means the
+   patch never applied, not that the work is done.
+
+Either way, package the skill as a `.skill` file and deliver it with `SendUserFile`: a push does not
+install anything in Riley's Claude account.
 
 Never force, never try another token, never push to a different repo.
 
@@ -64,7 +95,7 @@ Plugins point at whole directories, so **a skill dropped into an existing catego
 ### 2. Copy it in
 
 ```bash
-cp -r <skill-folder> /tmp/rcs/<category>/
+cp -r <skill-folder> <repo>/<category>/     # <repo> = his working copy locally, /tmp/rcs in a cloud session
 ```
 
 If the folder already exists, this is an update — `git diff` it so the changelog line can say what actually changed.
@@ -72,7 +103,7 @@ If the folder already exists, this is an update — `git diff` it so the changel
 ### 3. Update the README and marketplace
 
 ```bash
-python3 scripts/update_readme.py /tmp/rcs \
+python3 <repo>/personal/publish-skill-to-github/scripts/update_readme.py <repo> \
   --added <category>/<skill-name> \
   --desc "One line, present tense, what it does — not when it triggers." \
   --bump minor
@@ -94,12 +125,14 @@ Then read the README yourself for what a script cannot judge: does the plugin's 
 ### 4. Commit and push to main
 
 ```bash
-cd /tmp/rcs
+cd <repo>
 git add -A
 git status --short
 git commit -m "Add <category>/<name>: <one-line summary>"
 git push origin main
 ```
+
+GitHub prints `Bypassed rule violations for refs/heads/main` on every push here. That is expected, not an error: the repo carries a branch protection rule requiring pull requests, and Riley has decided skills go straight to main anyway. Don't switch to a PR because of that warning.
 
 `Add <path>: <summary>` for new skills, `Update <path>: <what changed>` for edits. No co-author trailers in this repo. If the push is rejected because main moved, `git pull --rebase` once and retry; if it fails again, stop and report.
 
