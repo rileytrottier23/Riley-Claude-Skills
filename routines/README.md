@@ -50,6 +50,22 @@ id; back up again so this folder reflects it.
 Pacific on weekdays (UTC−7 in summer). If you edit a schedule, convert from local
 time to UTC first.
 
+## Automating this backup
+
+On-demand backup works fully from any interactive session — the `list_triggers`
+and `add_repo` tools it needs are present there. **Unattended scheduled backup is
+the catch:** a routine created via the `create_trigger` tool fires sessions that
+run *without* `mcp__*` tools (the create call warns about this), so a scheduled
+firing can't call `list_triggers` to enumerate routines or `add_repo` to get push
+access. Such a routine would fail silently.
+
+To get a working scheduled backup, create the routine from the **claude.ai
+Routines UI** (or a session that holds the required connector), which can attach
+the tools a fired session needs. Use the on-demand flow above as the routine's
+prompt. Until then, the reliable pattern is: the `backup-claude-setup` skill runs
+whenever you change a routine or setting in a session — automatic in the sense of
+no manual steps, just not unattended.
+
 ## What not to commit here
 
 A routine's prompt can name private resource IDs (calendar/Notion/Drive handles).
