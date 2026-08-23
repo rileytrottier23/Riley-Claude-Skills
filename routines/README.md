@@ -26,9 +26,13 @@ calls a tool or the network — it only shapes JSON Claude already fetched.
 ## What each file holds
 
 - `id`, `name`, `enabled`, schedule (`cron_expression` **or** `run_once_at`),
-  `next_run_at`, `last_fired_at`, `created_at`, `notifications`
+  `created_at`, `notifications`
 - `prompt` — the full message the routine fires each time
 - `restore` — the exact arguments for a `create_trigger` call
+
+Volatile runtime fields (`next_run_at`, `last_fired_at`) are intentionally **not**
+stored — they move on every fire, so keeping them would make the backup churn a
+commit every run even when nothing meaningful changed.
 
 ## Restoring a routine
 

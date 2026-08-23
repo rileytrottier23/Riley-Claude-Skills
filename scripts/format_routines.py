@@ -77,14 +77,16 @@ def normalize(trigger: dict) -> dict:
     if trigger.get("persistent_session_id"):
         restore["persistent_session_id"] = trigger["persistent_session_id"]
 
+    # Volatile runtime fields (next_run_at, last_fired_at) are deliberately
+    # omitted: they change on every fire, and a backup that churned every run
+    # would defeat "only commit when something actually changed". Everything
+    # needed to restore a routine is stable.
     return {
         "id": tid,
         "name": name,
         "enabled": trigger.get("enabled", True),
         "cron_expression": trigger.get("cron_expression"),
         "run_once_at": trigger.get("run_once_at"),
-        "next_run_at": trigger.get("next_run_at"),
-        "last_fired_at": trigger.get("last_fired_at"),
         "created_at": trigger.get("created_at"),
         "notifications": trigger.get("notifications"),
         "prompt": prompt,
