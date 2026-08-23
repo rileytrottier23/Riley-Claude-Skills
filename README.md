@@ -1,9 +1,13 @@
 # Riley Claude Skills
 
 > **The library is now three repos, split by domain — but this repo still works as the combined hub.**
-> Its `marketplace.json` is an *aggregator*: it sources every plugin from the three domain repos below, so
-> adding this one marketplace gets you everything. Prefer just one domain? Add that repo's marketplace
-> directly instead.
+> Its `marketplace.json` is an *aggregator*: it sources the domain plugins from the three domain repos
+> below (plus one hub-native control-plane plugin), so adding this one marketplace gets you everything.
+> Prefer just one domain? Add that repo's marketplace directly instead.
+>
+> This hub is also the **control plane**: it backs up the parts of the setup that don't live in a skill
+> repo — [routines](#control-plane-keep-the-whole-setup-in-git) (scheduled triggers) and
+> [Claude Code settings](./config). See [Control plane](#control-plane-keep-the-whole-setup-in-git).
 
 Each skill is a folder containing a `SKILL.md`: an instruction set Claude loads when its description
 matches what you're asking for. They work in Claude Projects, Claude Code, and Cowork. Each repo below is
@@ -24,11 +28,13 @@ answerable at a glance.
 
 ## Install
 
-**Everything, from this hub** (one marketplace, all 8 plugins sourced from the three repos):
+**Everything, from this hub** (one marketplace, all 9 plugins — the domain plugins sourced from the three
+repos, plus the hub's own `riley-control-plane`):
 
 ```
 /plugin marketplace add rileytrottier23/Riley-Claude-Skills
 /plugin install riley-pm-skills@riley-claude-skills
+/plugin install riley-control-plane@riley-claude-skills
 ```
 
 **Or just one domain,** straight from its own repo:
@@ -43,6 +49,35 @@ Then `/plugin install <plugin>@<marketplace>` — see each repo's README for its
 desktop app / Cowork: Customize → Plugins → Personal plugins → **+** → Add marketplace → Add from a
 repository. Already have the `riley-claude-skills` marketplace from before? Just run
 `/plugin marketplace update riley-claude-skills` (or refresh in the app) — it now serves the three repos.
+
+## Control plane: keep the whole setup in git
+
+Skills are only part of the setup. Two other things live only in the Claude account and vanish if it's
+lost — **routines** (scheduled triggers) and **Claude Code settings** (marketplaces, enabled plugins,
+preferences). This hub versions both, so the entire setup is expandable, recoverable, and portable.
+
+| Folder | Holds | Backed up / restored by |
+|---|---|---|
+| [`routines/`](./routines) | Every scheduled trigger, as restore-ready JSON | `backup-claude-setup` skill → `list_triggers` → `scripts/format_routines.py` |
+| [`config/`](./config) | A portable, secret-free `settings.json` baseline | `backup-claude-setup` skill |
+| `scripts/` | The formatter that shapes `list_triggers` output into `routines/` | — |
+
+Three skills, one motion each — say the phrase and it happens, no clicking through menus:
+
+- **"push this skill"** → `publish-skill-to-github` routes a new/edited skill to the right domain repo
+  (`riley-pm-skills` / `riley-coding-skills` / `riley-thinking-skills`), under `mine/` or `vendored/`, and
+  updates that repo's README, marketplace, and changelog.
+- **"back up my routines / settings"** → `backup-claude-setup` snapshots routines and settings into this
+  hub and commits them. It also **restores**: "recreate the routine in `routines/<slug>.json`."
+- Everything is **git**, so `git pull` picks up updates and every change has a diff and a rollback.
+
+### Why skills trigger without being asked for
+
+A skill fires when Claude decides its `description` matches the request — no menu, no `/command`. Two
+things make that reliable, and both are set up here: `permissions.allow: ["Skill"]` in the settings
+baseline (so a matched skill runs without a permission prompt), and sharp, trigger-rich descriptions on
+every skill (`publish-skill-to-github` enforces this on the way in — a skill with a vague description never
+fires). See [`config/README.md`](./config/README.md).
 
 ## Why the split
 
