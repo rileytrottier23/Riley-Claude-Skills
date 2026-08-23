@@ -167,9 +167,15 @@ def main():
     if tp_root.is_dir():
         for coll in sorted(d for d in tp_root.iterdir() if d.is_dir()):
             c = count_skills(coll)
-            cell = "1 (large)" if c == 1 else str(c)
-            text = re.sub(rf"(\[{re.escape(coll.name)}\]\([^)]*\)\s*\|[^|]*\|\s*)[^|]*(\|)",
-                          rf"\g<1>{cell} \g<2>", text)
+            pat = rf"(\[{re.escape(coll.name)}\]\([^)]*\)\s*\|[^|]*\|\s*)([^|]*?)(\s*\|)"
+
+            def sub(m):
+                # keep a hand-written annotation like "(large, multi-part)"; only fix the number
+                note = m.group(2)
+                extra = note[note.index("("):] if "(" in note else ""
+                return m.group(1) + (f"{c} {extra}".strip()) + m.group(3)
+
+            text = re.sub(pat, sub, text)
 
     # --- 2. category tables --------------------------------------------
     descs = dict(zip(args.added, args.desc))
