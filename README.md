@@ -4,7 +4,7 @@ The Claude skills I actually use for product work — versioned here rather than
 
 Each skill is a folder containing a `SKILL.md`: an instruction set Claude loads when the skill's description matches what you are asking for. They are written for [Claude Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) and work in Claude Projects, Claude Code, and Cowork.
 
-**This repo is also a plugin marketplace** — 34 skills installable in one step. See [Install](#install) below.
+**This repo is also a plugin marketplace** — 48 skills installable in one step. See [Install](#install) below.
 
 ## Install
 
@@ -19,7 +19,7 @@ Add this repo as a plugin marketplace and the skills install themselves — no c
 /plugin install riley-pm-skills@riley-claude-skills
 ```
 
-Six plugins, install whichever you want:
+Seven plugins, install whichever you want:
 
 | Plugin | Skills | What's in it |
 |---|---|---|
@@ -29,6 +29,7 @@ Six plugins, install whichever you want:
 | `pm-skills-deanpeters` | 12 | Dean Peters' PM skills (CC BY-NC-SA 4.0) |
 | `pm-skills-digidai` | 1 | Gene Dai's PM skill pack (CC BY-NC-SA 4.0) |
 | `writing-skills-obra` | 1 | Strunk's Elements of Style, packaged by Jesse Vincent (public domain) |
+| `superpowers` | 14 | Jesse Vincent's coding-agent methodology — TDD, debugging, planning, code review, git worktrees (MIT) |
 
 Plugin skills are namespaced, so an installed skill is invoked as `/pm-skills-deanpeters:pol-probe` if you want to call one by name. Mostly you won't — Claude triggers them from their descriptions.
 
@@ -74,8 +75,9 @@ Kept in [`personal/`](./personal) — useful as examples of how much context a s
 | [deanpeters-product-manager-skills](./third-party/deanpeters-product-manager-skills) | Dean Peters (Productside) | 12 | CC BY-NC-SA 4.0 |
 | [digidai-product-manager-skills](./third-party/digidai-product-manager-skills) | Gene Dai | 1 (large) | CC BY-NC-SA 4.0 |
 | [obra-elements-of-style](./third-party/obra-elements-of-style) | Jesse Vincent | 1 | Public domain |
+| [obra-superpowers](./third-party/obra-superpowers) | Jesse Vincent | 14 | MIT |
 
-The two PM collections are NonCommercial — that restricts how you *use* them, not this repo hosting them. The Elements of Style folder is public domain and carries no such restriction. See [`third-party/README.md`](./third-party/README.md).
+The two PM collections are NonCommercial — that restricts how you *use* them, not this repo hosting them. The Elements of Style folder (public domain) and superpowers (MIT) carry no such restriction. See [`third-party/README.md`](./third-party/README.md).
 
 ## Using them without the marketplace
 
