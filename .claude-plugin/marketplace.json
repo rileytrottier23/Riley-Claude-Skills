@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Riley's skills library: PM and personal skills, plus vendored collections from Anthropic, Dean Peters, and Gene Dai.",
-    "version": "1.2.0"
+    "version": "1.3.0"
   },
   "plugins": [
     {
@@ -43,6 +43,13 @@
       "source": "./",
       "strict": false,
       "skills": ["./third-party/digidai-product-manager-skills/"]
+    },
+    {
+      "name": "writing-skills-obra",
+      "description": "Jesse Vincent's Elements of Style packaging (public domain): Strunk's 1918 rules applied to documentation, commit messages, and any prose an agent writes.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./third-party/obra-elements-of-style/"]
     }
   ]
 }
