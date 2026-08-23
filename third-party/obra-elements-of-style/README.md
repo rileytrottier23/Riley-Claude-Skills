@@ -14,7 +14,7 @@ manifest declares `"license": "Public Domain"`, and the underlying text — Will
 license is Jesse Vincent's packaging: the `SKILL.md` wrapper that decides when the reference gets read.
 Treated here as the public-domain declaration says. If that matters for your use, ask upstream.
 
-This is the only folder in `third-party/` that is not Creative Commons.
+This and `obra-superpowers` (MIT) are the folders in `third-party/` that are not Creative Commons.
 
 ## The skill
 

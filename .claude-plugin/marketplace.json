@@ -5,8 +5,8 @@
     "url": "https://github.com/rileytrottier23"
   },
   "metadata": {
-    "description": "Riley's skills library: PM and personal skills, plus vendored collections from Anthropic, Dean Peters, and Gene Dai.",
-    "version": "1.3.0"
+    "description": "Riley's skills library: PM and personal skills, plus vendored collections from Anthropic, Dean Peters, Gene Dai, and Jesse Vincent.",
+    "version": "1.4.0"
   },
   "plugins": [
     {
@@ -50,6 +50,13 @@
       "source": "./",
       "strict": false,
       "skills": ["./third-party/obra-elements-of-style/"]
+    },
+    {
+      "name": "superpowers",
+      "description": "Jesse Vincent's superpowers (MIT): a coding-agent methodology in 14 skills — TDD, systematic debugging, planning, code review, git worktrees. Named 'superpowers' so the skills' internal cross-references resolve.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./third-party/obra-superpowers/"]
     }
   ]
 }
