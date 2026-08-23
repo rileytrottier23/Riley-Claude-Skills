@@ -5,51 +5,65 @@
     "url": "https://github.com/rileytrottier23"
   },
   "metadata": {
-    "description": "Riley's skills library: PM and personal skills, plus vendored collections from Anthropic, Dean Peters, and Gene Dai.",
-    "version": "1.3.0"
+    "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place. Each plugin is sourced from its home repo.",
+    "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "riley-pm-skills",
       "description": "Riley's own product-management skills: PRD and spec writing, stakeholder decks, competitive research reports.",
-      "source": "./",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-pm-skills" },
       "strict": false,
-      "skills": ["./pm/"]
-    },
-    {
-      "name": "riley-personal-skills",
-      "description": "Riley's personal skills: Canadian personal-finance modelling, chess coaching, Quebec French tutoring, and publishing new skills to this repo.",
-      "source": "./",
-      "strict": false,
-      "skills": ["./personal/"]
-    },
-    {
-      "name": "anthropic-example-skills",
-      "description": "13 example skills from anthropics/skills (Apache 2.0): art and design, frontend, MCP building, internal comms, web artifacts, webapp testing, and more.",
-      "source": "./",
-      "strict": false,
-      "skills": ["./anthropic/"]
+      "skills": ["./mine/"]
     },
     {
       "name": "pm-skills-deanpeters",
       "description": "12 product-management skills by Dean Peters (Productside), CC BY-NC-SA 4.0: discovery, JTBD, prioritization, roadmapping, PoL probes, user stories.",
-      "source": "./",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-pm-skills" },
       "strict": false,
-      "skills": ["./third-party/deanpeters-product-manager-skills/"]
+      "skills": ["./vendored/deanpeters-product-manager-skills/"]
     },
     {
       "name": "pm-skills-digidai",
       "description": "Gene Dai's product-manager-skills (CC BY-NC-SA 4.0): SaaS metrics diagnosis, PRD critique, PLG growth strategy, PM career coaching.",
-      "source": "./",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-pm-skills" },
       "strict": false,
-      "skills": ["./third-party/digidai-product-manager-skills/"]
+      "skills": ["./vendored/digidai-product-manager-skills/"]
+    },
+    {
+      "name": "superpowers",
+      "description": "Jesse Vincent's superpowers (MIT): a coding-agent methodology in 14 skills — TDD, systematic debugging, planning, code review, git worktrees. Named 'superpowers' so the skills' internal cross-references resolve.",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
+      "strict": false,
+      "skills": ["./vendored/obra-superpowers/"]
+    },
+    {
+      "name": "anthropic-coding-skills",
+      "description": "Engineering example skills from anthropics/skills (Apache 2.0): mcp-builder, webapp-testing, web-artifacts-builder, frontend-design, claude-api.",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
+      "strict": false,
+      "skills": ["./vendored/anthropic/"]
+    },
+    {
+      "name": "riley-thinking-skills",
+      "description": "Riley's own thinking and general skills: decision-partner, decision-review, practice-partner, reflection-partner, Canadian personal-finance modelling, chess coaching, Quebec French tutoring, and the skill-publishing tool.",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
+      "strict": false,
+      "skills": ["./mine/"]
+    },
+    {
+      "name": "anthropic-example-skills",
+      "description": "Example skills from anthropics/skills (Apache 2.0): doc co-authoring, internal comms, algorithmic art, brand guidelines, theme factory, Slack GIF creator, Claude Academy guide, discernment nudge.",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
+      "strict": false,
+      "skills": ["./vendored/anthropic/"]
     },
     {
       "name": "writing-skills-obra",
       "description": "Jesse Vincent's Elements of Style packaging (public domain): Strunk's 1918 rules applied to documentation, commit messages, and any prose an agent writes.",
-      "source": "./",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
       "strict": false,
-      "skills": ["./third-party/obra-elements-of-style/"]
+      "skills": ["./vendored/obra-elements-of-style/"]
     }
   ]
 }
