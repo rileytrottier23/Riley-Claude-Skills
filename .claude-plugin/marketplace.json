@@ -5,10 +5,17 @@
     "url": "https://github.com/rileytrottier23"
   },
   "metadata": {
-    "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place. Each plugin is sourced from its home repo.",
-    "version": "2.0.0"
+    "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place, plus the control-plane tooling that backs up routines and settings. Each domain plugin is sourced from its home repo.",
+    "version": "2.1.0"
   },
   "plugins": [
+    {
+      "name": "riley-control-plane",
+      "description": "Hub tooling that keeps the whole setup in git: backs up routines (scheduled triggers) and Claude Code settings to this repo, and restores them. Pairs with publish-skill-to-github (which routes skills to the domain repos).",
+      "source": { "source": "github", "repo": "rileytrottier23/Riley-Claude-Skills" },
+      "strict": false,
+      "skills": ["./control-plane/"]
+    },
     {
       "name": "riley-pm-skills",
       "description": "Riley's own product-management skills: PRD and spec writing, stakeholder decks, competitive research reports.",
