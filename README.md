@@ -1,11 +1,14 @@
 # Riley Claude Skills
 
-> **This library has moved.** It was one repo; it's now three, split by domain. This page is an index —
-> the skills themselves live in the repos below. Nothing installs from here anymore.
+> **The library is now three repos, split by domain — but this repo still works as the combined hub.**
+> Its `marketplace.json` is an *aggregator*: it sources every plugin from the three domain repos below, so
+> adding this one marketplace gets you everything. Prefer just one domain? Add that repo's marketplace
+> directly instead.
 
 Each skill is a folder containing a `SKILL.md`: an instruction set Claude loads when its description
-matches what you're asking for. They work in Claude Projects, Claude Code, and Cowork. Every repo below is
-also a plugin marketplace, so you can install a whole domain in one step and `git pull` picks up updates.
+matches what you're asking for. They work in Claude Projects, Claude Code, and Cowork. Each repo below is
+also a standalone plugin marketplace, so you can install a whole domain on its own and `git pull` picks up
+updates.
 
 ## The three repos
 
@@ -21,7 +24,14 @@ answerable at a glance.
 
 ## Install
 
-Pick the domain you want:
+**Everything, from this hub** (one marketplace, all 8 plugins sourced from the three repos):
+
+```
+/plugin marketplace add rileytrottier23/Riley-Claude-Skills
+/plugin install riley-pm-skills@riley-claude-skills
+```
+
+**Or just one domain,** straight from its own repo:
 
 ```
 /plugin marketplace add rileytrottier23/riley-pm-skills
@@ -31,7 +41,8 @@ Pick the domain you want:
 
 Then `/plugin install <plugin>@<marketplace>` — see each repo's README for its plugin list. In the Claude
 desktop app / Cowork: Customize → Plugins → Personal plugins → **+** → Add marketplace → Add from a
-repository.
+repository. Already have the `riley-claude-skills` marketplace from before? Just run
+`/plugin marketplace update riley-claude-skills` (or refresh in the app) — it now serves the three repos.
 
 ## Why the split
 
