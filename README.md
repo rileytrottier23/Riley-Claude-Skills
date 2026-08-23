@@ -20,7 +20,7 @@ updates.
 |---|---|---|
 | [**riley-pm-skills**](https://github.com/rileytrottier23/riley-pm-skills) | Product & PM — PRDs and specs, stakeholder decks, competitive research, plus vendored PM collections (Dean Peters, Gene Dai) | 16 |
 | [**riley-coding-skills**](https://github.com/rileytrottier23/riley-coding-skills) | Coding & engineering — TDD, debugging, planning, code review, git worktrees (superpowers), MCP building, frontend/webapp tooling | 19 |
-| [**riley-thinking-skills**](https://github.com/rileytrottier23/riley-thinking-skills) | Everything else — decision/reflection/practice partners, personal-life modelling, writing & comms, creative/design, and the skill-publishing tool | 21 |
+| [**riley-thinking-skills**](https://github.com/rileytrottier23/riley-thinking-skills) | Everything else — decision/reflection/practice partners, personal-life modelling, writing & comms, creative/design, and the skill-publishing tool | 17 |
 
 Each repo splits its skills into **`mine/`** (my own work, MIT) and **`vendored/`** (other people's,
 pinned to an upstream commit under their original license), so "who wrote this and under what license" is

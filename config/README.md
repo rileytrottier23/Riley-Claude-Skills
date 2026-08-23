@@ -43,6 +43,31 @@ cp config/settings.baseline.json ~/.claude/settings.json
 
 Or just ask Claude: *"apply my settings baseline from config/settings.baseline.json."*
 
+## Current account state vs. this baseline (2026-08-23)
+
+The baseline above is the **intended** post-split target: Riley's own domain plugins
+(`riley-pm-skills`, `riley-coding-skills`, `riley-thinking-skills`) plus their vendored
+collections and `riley-control-plane`. A live check of the account found it still on the
+**pre-split** configuration, so restore-vs-reality is not yet the same thing:
+
+| | Live account | This baseline (target) |
+|---|---|---|
+| PM | `riley-pm-skills`, `pm-skills-deanpeters`, `pm-skills-digidai` ✓ | same ✓ |
+| Thinking | **old `riley-personal-skills`** (pre-split bundle) | `riley-thinking-skills` + `anthropic-example-skills` + `writing-skills-obra` |
+| Coding | **none enabled** | `superpowers`, `anthropic-coding-skills` |
+| Control plane | none | `riley-control-plane` |
+
+Practical effect: the coding skills and the newer thinking skills
+(`decision-partner`, `decision-review`, `practice-partner`, `reflection-partner`) are
+**not loaded in the account** and won't trigger until the plugins are enabled. To migrate,
+add the two missing marketplaces and install their plugins (see each repo's README for the
+exact `/plugin install` lines), then remove the old `riley-personal-skills`.
+
+**Anthropic Cowork plugins** (`pdf-viewer`, `design`, `product-management`, `productivity`,
+`finance`, `data`, `cowork-plugin-management`) are also enabled in the account. Those come
+from Anthropic's built-in Cowork marketplace, not Riley's repos, and are managed there — so
+they're intentionally *not* in this baseline, which scopes to Riley's own skills.
+
 ## Triggering skills without asking
 
 Two things make a skill fire on its own, and both are covered:
