@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "theme": "dark",
+  "autoUpdatesChannel": "latest",
+  "enableWorkflows": true,
+  "inputNeededNotifEnabled": false,
+  "agentPushNotifEnabled": true,
+  "permissions": {
+    "allow": ["Skill"]
+  },
+  "extraKnownMarketplaces": {
+    "riley-claude-skills": {
+      "source": { "source": "github", "repo": "rileytrottier23/Riley-Claude-Skills" }
+    },
+    "riley-pm-skills": {
+      "source": { "source": "github", "repo": "rileytrottier23/riley-pm-skills" }
+    },
+    "riley-coding-skills": {
+      "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" }
+    },
+    "riley-thinking-skills": {
+      "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" }
+    }
+  },
+  "enabledPlugins": {
+    "riley-control-plane@riley-claude-skills": true,
+    "riley-pm-skills@riley-pm-skills": true,
+    "pm-skills-deanpeters@riley-pm-skills": true,
+    "pm-skills-digidai@riley-pm-skills": true,
+    "superpowers@riley-coding-skills": true,
+    "anthropic-coding-skills@riley-coding-skills": true,
+    "riley-thinking-skills@riley-thinking-skills": true,
+    "anthropic-example-skills@riley-thinking-skills": true,
+    "writing-skills-obra@riley-thinking-skills": true
+  }
+}
