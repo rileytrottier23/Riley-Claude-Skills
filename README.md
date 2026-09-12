@@ -62,13 +62,19 @@ preferences). This hub versions both, so the entire setup is expandable, recover
 | [`config/`](./config) | A portable, secret-free `settings.json` baseline | `backup-claude-setup` skill |
 | `scripts/` | The formatter that shapes `list_triggers` output into `routines/` | — |
 
-Three skills, one motion each — say the phrase and it happens, no clicking through menus:
+Four skills, one motion each — say the phrase and it happens, no clicking through menus:
 
 - **"push this skill"** → `publish-skill-to-github` routes a new/edited skill to the right domain repo
   (`riley-pm-skills` / `riley-coding-skills` / `riley-thinking-skills`), under `mine/` or `vendored/`, and
   updates that repo's README, marketplace, and changelog.
 - **"back up my routines / settings"** → `backup-claude-setup` snapshots routines and settings into this
   hub and commits them. It also **restores**: "recreate the routine in `routines/<slug>.json`."
+- **"remember this" / "don't make that mistake again"** → `self-improve` captures a lesson from the
+  session and routes it: a universal preference goes to `~/.claude/CLAUDE.md` (mirrored here as
+  `config/global-learnings.md` so it's diffable and revertible), a recurring domain pattern gets promoted
+  into a real skill instead, and a project-specific fact is left in that project's own `CLAUDE.md`.
+  Deliberately scoped narrower than a plain "dump everything into global memory" approach — see the
+  skill's own notes on why global memory is loaded unconditionally into every session and skills aren't.
 - Everything is **git**, so `git pull` picks up updates and every change has a diff and a rollback.
 
 ### Why skills trigger without being asked for

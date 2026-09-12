@@ -12,6 +12,10 @@ enabled, and the personal preferences that make the harness feel like Riley's.
   preferences below.
 - **`mcp-servers.baseline.json`** — the `mcpServers` entries for Riley's personal-account MCP
   integrations (WhatsApp, Chess.com). See [MCP servers](#mcp-servers) below.
+- **`global-learnings.md`** — a versioned mirror of the `## Learnings` section in
+  `~/.claude/CLAUDE.md` (Riley's account-wide memory, loaded in every session everywhere).
+  Kept and pruned by the `self-improve` skill under `control-plane/`. See that file for
+  what belongs here versus in a promoted skill versus a project's own `CLAUDE.md`.
 
 ## What the baseline configures
 

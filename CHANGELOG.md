@@ -2,6 +2,17 @@
 
 Newest first.
 
+- 2026-09-12 — Added `self-improve` under `control-plane/`: a global, cross-project
+  version of the "reflecting plugin appends lessons to CLAUDE.md" pattern. Unlike a
+  per-project version, a single global memory file is loaded unconditionally into
+  *every* session regardless of relevance, so this skill classifies each lesson first —
+  a universal preference goes to `~/.claude/CLAUDE.md` (mirrored here as
+  `config/global-learnings.md` for diff/rollback), a pattern that's recurred in a
+  domain gets promoted into a real skill instead (via `skill-creator` /
+  `publish-skill-to-github`, so it only loads when relevant), and a project-specific
+  fact is left alone in that project's own `CLAUDE.md`. Bumped the marketplace to
+  2.2.0.
+
 - 2026-09-12 — Set up the *Weekly Chess.com Review* routine (Mondays, fresh session) and backed
   it up to `routines/chess-weekly-review.json`. It pulls the last 7 days of games from Chess.com's
   public API, analyzes them with the `chess-coach` skill, draws hand-authored SVG board diagrams
