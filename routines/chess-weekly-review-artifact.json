@@ -1,0 +1,6 @@
+{
+  "artifact_url": "https://claude.ai/code/artifact/14c30382-43a4-46bb-a37e-426a396d9507",
+  "title": "Weekly Chess Review",
+  "updated_at": "2026-09-12",
+  "note": "Read by the 'Weekly Chess.com Review' routine (see chess-weekly-review.json) at the start of every run, via this file's public raw.githubusercontent.com URL — no auth needed since this repo is public. The routine reads this artifact_url, calls the Artifact tool with action \"read\" on it to see last week's version, then republishes to the SAME url so the link never changes. Update this file by hand only if the routine is ever pointed at a different artifact."
+}
