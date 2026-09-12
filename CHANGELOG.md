@@ -2,6 +2,12 @@
 
 Newest first.
 
+- 2026-09-12 — Added `config/mcp-servers.baseline.json` and documented two personal-account MCP
+  servers in `config/README.md`: `chess` ([pab1it0/chess-mcp](https://github.com/pab1it0/chess-mcp),
+  Docker-only, no auth) and `whatsapp` ([lharries/whatsapp-mcp](https://github.com/lharries/whatsapp-mcp),
+  QR-scan auth + a locally-running Go bridge). These are live tools rather than prompts, so they're
+  wired in via Claude Code's MCP config (`claude mcp add`) instead of the plugin/skill system.
+
 - 2026-09-02 — **Fixed the plugin install path, which had been broken since the split.** All three domain
   marketplaces declared `"strict": true` while carrying no `.claude-plugin/plugin.json`. That combination
   is invalid (strict:true *requires* a plugin.json; strict:false means the marketplace entry is the whole

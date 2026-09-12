@@ -10,6 +10,8 @@ enabled, and the personal preferences that make the harness feel like Riley's.
 - **`settings.baseline.json`** — a complete `settings.json` you can drop in:
   registers all four skills marketplaces, enables the nine plugins, and sets the
   preferences below.
+- **`mcp-servers.baseline.json`** — the `mcpServers` entries for Riley's personal-account MCP
+  integrations (WhatsApp, Chess.com). See [MCP servers](#mcp-servers) below.
 
 ## What the baseline configures
 
@@ -42,6 +44,53 @@ cp config/settings.baseline.json ~/.claude/settings.json
 ```
 
 Or just ask Claude: *"apply my settings baseline from config/settings.baseline.json."*
+
+## MCP servers
+
+Personal-account integrations that don't fit the plugin/skill system — these are live external
+tools (one talks to a real WhatsApp account, the other to Chess.com's API), not prompts, so they're
+wired in via Claude Code's MCP config instead of `/plugin install`.
+
+| Server | Source | Auth | Notes |
+|---|---|---|---|
+| `chess` | [pab1it0/chess-mcp](https://github.com/pab1it0/chess-mcp) | None — Chess.com's public Published Data API | Runs via Docker, no local clone needed |
+| `whatsapp` | [lharries/whatsapp-mcp](https://github.com/lharries/whatsapp-mcp) | One-time QR scan from your phone; session cached locally | Needs a companion Go bridge process kept running |
+
+`mcp-servers.baseline.json` documents both entries. The WhatsApp paths are placeholders
+(`{{PATH_TO_UV}}`, `{{PATH_TO_WHATSAPP_MCP_REPO}}`) since they're machine-specific, not secrets —
+safe to commit as-is.
+
+### Setup: chess (Docker only)
+
+```bash
+claude mcp add chess -s user -- docker run --rm -i pab1it0/chess-mcp
+```
+
+Requires Docker running locally. No account or config needed — it only reads Chess.com's public
+player/game data.
+
+### Setup: WhatsApp (needs a background bridge process)
+
+1. Install prerequisites — Go and [uv](https://astral.sh/uv) — then clone the server:
+   ```bash
+   git clone https://github.com/lharries/whatsapp-mcp.git ~/mcp/whatsapp-mcp
+   ```
+2. Start the bridge and keep it running — it holds the WhatsApp Web session:
+   ```bash
+   cd ~/mcp/whatsapp-mcp/whatsapp-bridge
+   go run main.go
+   ```
+   The first run shows a QR code — scan it with WhatsApp on your phone to link the device.
+3. Register the MCP server (swap in your real `uv` path from `which uv`):
+   ```bash
+   claude mcp add whatsapp -s user -- $(which uv) --directory ~/mcp/whatsapp-mcp/whatsapp-mcp-server run main.py
+   ```
+
+Restart Claude Code after adding either server.
+
+**Not backed up:** the WhatsApp bridge's local session store (a SQLite db under
+`whatsapp-bridge/store/`) is your device-linked auth — never commit it, and it isn't tracked here.
+Re-scanning the QR code on a new machine is the intended recovery path.
 
 ## Current account state vs. this baseline (2026-08-23)
 
