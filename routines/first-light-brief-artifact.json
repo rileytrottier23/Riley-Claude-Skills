@@ -1,0 +1,8 @@
+{
+  "artifact_url": "https://claude.ai/code/artifact/428a6851-8f8f-4bbb-bdff-f1cedb5f694c",
+  "title": "First Light Brief",
+  "updated_at": "2026-09-12",
+  "capabilities": ["db", "mcp: Google Tasks MCP -> patch_task"],
+  "db_documents": ["briefing/current", "briefing/checks"],
+  "note": "State file for the 'First Light Brief — hourly' routine (trig_01UGimbrAf3miYHyVDQQv744). NOT a routine backup — see first-light-brief.md for the full documentation. The routine writes the briefing into this artifact's database every hour rather than republishing the page, so the page itself only changes when its design does. The artifact is installed as an app on Riley's laptop and phone, so this URL must stay stable: if the page is ever rebuilt, republish to this SAME url and leave this file alone. Update this file by hand only if the routine is ever pointed at a different artifact."
+}
