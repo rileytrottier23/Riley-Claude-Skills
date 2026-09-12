@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "chess": {
+      "command": "docker",
+      "args": ["run", "--rm", "-i", "pab1it0/chess-mcp"]
+    },
+    "whatsapp": {
+      "command": "{{PATH_TO_UV}}",
+      "args": [
+        "--directory",
+        "{{PATH_TO_WHATSAPP_MCP_REPO}}/whatsapp-mcp-server",
+        "run",
+        "main.py"
+      ]
+    }
+  }
+}

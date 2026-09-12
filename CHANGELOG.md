@@ -2,6 +2,20 @@
 
 Newest first.
 
+- 2026-09-12 — Set up the *Weekly Chess.com Review* routine (Mondays, fresh session) and backed
+  it up to `routines/chess-weekly-review.json`. It pulls the last 7 days of games from Chess.com's
+  public API, analyzes them with the `chess-coach` skill, draws hand-authored SVG board diagrams
+  of the week's key mistake and its fix, and publishes the write-up as a styled HTML Artifact.
+  Added `routines/chess-weekly-review-artifact.json` to hold the current artifact URL — the routine
+  reads it (via this repo's public raw URL) at the start of each run and republishes to the same
+  URL, so the link stays stable across weeks instead of a new artifact appearing every Monday.
+
+- 2026-09-12 — Added `config/mcp-servers.baseline.json` and documented two personal-account MCP
+  servers in `config/README.md`: `chess` ([pab1it0/chess-mcp](https://github.com/pab1it0/chess-mcp),
+  Docker-only, no auth) and `whatsapp` ([lharries/whatsapp-mcp](https://github.com/lharries/whatsapp-mcp),
+  QR-scan auth + a locally-running Go bridge). These are live tools rather than prompts, so they're
+  wired in via Claude Code's MCP config (`claude mcp add`) instead of the plugin/skill system.
+
 - 2026-09-02 — **Fixed the plugin install path, which had been broken since the split.** All three domain
   marketplaces declared `"strict": true` while carrying no `.claude-plugin/plugin.json`. That combination
   is invalid (strict:true *requires* a plugin.json; strict:false means the marketplace entry is the whole

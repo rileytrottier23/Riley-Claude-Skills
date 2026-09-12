@@ -66,6 +66,16 @@ prompt. Until then, the reliable pattern is: the `backup-claude-setup` skill run
 whenever you change a routine or setting in a session — automatic in the sense of
 no manual steps, just not unattended.
 
+## Companion state files
+
+Not every file here is a routine backup. `chess-weekly-review-artifact.json` holds the
+current URL of the Artifact that the *Weekly Chess.com Review* routine republishes each
+week — the routine fetches it (via this repo's public raw URL, no auth needed) at the
+start of every run and republishes to that same URL, so the link stays stable instead of
+a fresh artifact appearing every Monday. It's state the routine reads, not a
+`create_trigger` restore spec. Only edit it by hand if the routine starts pointing at a
+different artifact.
+
 ## What not to commit here
 
 A routine's prompt can name private resource IDs (calendar/Notion/Drive handles).
