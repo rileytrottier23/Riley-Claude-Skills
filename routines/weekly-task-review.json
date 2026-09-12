@@ -1,0 +1,19 @@
+{
+  "id": "trig_01UAJhcpWSchwSqvq4TxZi8k",
+  "name": "Weekly Task Review",
+  "enabled": true,
+  "cron_expression": "0 1 * * 1",
+  "run_once_at": null,
+  "created_at": "2026-09-10T05:49:49.312706Z",
+  "persist_session": true,
+  "ended_reason": null,
+  "notifications": null,
+  "prompt": "It's Sunday 6pm — time for the weekly task review. Review Riley's Gmail, Google Calendar, Google Tasks, GitHub, Railway, and reflect-journal (his journal) for anything that should become a to-do. Look for:\n- Unread but important emails needing action\n- Calendar events in the next 2 weeks needing prep/follow-up\n- Open GitHub issues assigned to rileytrottier23\n- Railway services with failures, issues, or large undeployed staged changes\n- Anything flagged in Riley's Google Tasks lists as still open\n- Recent journal entries (reflect-journal) that mention something Riley intends to do, follow up on, or is worried about\n\nCross-check against Riley's existing Google Tasks lists (Today, Short-Term Tasks, AI, Long-Term Tasks, Waiting, Claude) so you don't suggest duplicates of tasks already sitting there, including ones added by a previous run of this same review (those land in the \"Claude\" list awaiting approval and may still be pending).\n\nDraft a list of no more than 6 candidate tasks. Do NOT add them to Google Tasks — just draft them.\n\nWhen done, email a short summary of the candidate tasks to riley.a.trottier@gmail.com, and tell Riley to open Claude to review and approve/reject them before they get added.",
+  "restore": {
+    "name": "Weekly Task Review",
+    "prompt": "It's Sunday 6pm — time for the weekly task review. Review Riley's Gmail, Google Calendar, Google Tasks, GitHub, Railway, and reflect-journal (his journal) for anything that should become a to-do. Look for:\n- Unread but important emails needing action\n- Calendar events in the next 2 weeks needing prep/follow-up\n- Open GitHub issues assigned to rileytrottier23\n- Railway services with failures, issues, or large undeployed staged changes\n- Anything flagged in Riley's Google Tasks lists as still open\n- Recent journal entries (reflect-journal) that mention something Riley intends to do, follow up on, or is worried about\n\nCross-check against Riley's existing Google Tasks lists (Today, Short-Term Tasks, AI, Long-Term Tasks, Waiting, Claude) so you don't suggest duplicates of tasks already sitting there, including ones added by a previous run of this same review (those land in the \"Claude\" list awaiting approval and may still be pending).\n\nDraft a list of no more than 6 candidate tasks. Do NOT add them to Google Tasks — just draft them.\n\nWhen done, email a short summary of the candidate tasks to riley.a.trottier@gmail.com, and tell Riley to open Claude to review and approve/reject them before they get added.",
+    "initiation": "human_request",
+    "cron_expression": "0 1 * * 1",
+    "persistent_session_id": "session_015y4ukiXgaSDKPWbe92mFsV"
+  }
+}
