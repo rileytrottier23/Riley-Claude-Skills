@@ -53,6 +53,9 @@ being turned off.
 
 ## Notes
 
+- 2026-09-13 — "First Light Brief" renamed **Throughline**. Same artifact and URL. Living doc is now `routines/throughline.md`; `routines/first-light-brief.md` is superseded.
+- 2026-09-13 — Scheduled tasks are now `Throughline — hourly` (trig_01UGimbrAf3miYHyVDQQv744) and `Throughline — weekly review` (trig_015hXDZZKqzKJRieMbGs57dq, Sundays 21:00 Pacific). The old `first-light-brief-*.json` backups retire on the next backup run.
+
 **2026-09-12 — script fixed.** `format_routines.py` had drifted from what `list_triggers`
 returns and was extracting an empty prompt from every routine, which is why the chess
 routine had to be backed up by hand. Three fixes:
