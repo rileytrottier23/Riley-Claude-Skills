@@ -1,6 +1,6 @@
 # Skills Cheat Sheet
 
-Every skill across the hub and the three domain repos, plus the ones that live only in the Claude
+Every skill across the hub and the three domain repos, plus the one that lives only in the Claude
 account. Pick a skill by what you're trying to do. You never have to name a skill: say something like the
 phrase in the last column and Claude loads the matching one.
 
@@ -15,7 +15,7 @@ phrase in the last column and Claude loads the matching one.
 | 🎓 **Coaches you** | Teaches a skill over time and adapts to your level | `chess-coach`, `french-tutor`, `canadian-financial-modeler` |
 | ⚙️ **Runs the setup** | Maintains the skills library, settings, routines, and memory | `publish-skill-to-github`, `backup-claude-setup`, `self-improve`, `riley-context` |
 
-**Where each skill lives:** **Hub** = this repo · **PM** = [riley-pm-skills](https://github.com/rileytrottier23/riley-pm-skills) · **Coding** = [riley-coding-skills](https://github.com/rileytrottier23/riley-coding-skills) · **Thinking** = [riley-thinking-skills](https://github.com/rileytrottier23/riley-thinking-skills) · **Account** = in the Claude account only, not yet in any repo. A † after the name marks a vendored skill (someone else's work, pinned upstream).
+**Where each skill lives:** **Hub** = this repo · **PM** = [riley-pm-skills](https://github.com/rileytrottier23/riley-pm-skills) · **Coding** = [riley-coding-skills](https://github.com/rileytrottier23/riley-coding-skills) · **Thinking** = [riley-thinking-skills](https://github.com/rileytrottier23/riley-thinking-skills) · **Account** = kept in the Claude account only, on purpose, because it holds personal details that don't belong in a public repo. A † after the name marks a vendored skill (someone else's work, pinned upstream).
 
 ---
 
@@ -25,8 +25,8 @@ phrase in the last column and Claude loads the matching one.
 |---|---|---|---|
 | **Product docs & specs** | | | |
 | Write a PRD, spec, feature brief, or one-pager | `prd-spec-writer` · PM | 🛠️ Makes it | "Help me write up this feature" · "Spec out this idea" |
-| Write or revise a Workday FDD or PRD section in house style | `fdd-writer` · Account | 🛠️ Makes it | "Write the FDD" · "Draft the Develop section" · "Create a Topic 101" |
-| Turn a standalone business rule into a decision table and Given/When/Then criteria | `deterministic-logic-spec` · Account | 🛠️ Makes it | "Spec this rule" · "Decision table for X" · "Edge cases for this rule" |
+| Write or revise a Workday FDD or PRD section in house style | `fdd-writer` · PM | 🛠️ Makes it | "Write the FDD" · "Draft the Develop section" · "Create a Topic 101" |
+| Turn a standalone business rule into a decision table and Given/When/Then criteria | `deterministic-logic-spec` · PM | 🛠️ Makes it | "Spec this rule" · "Decision table for X" · "Edge cases for this rule" |
 | Write user stories with Gherkin acceptance criteria | `user-story`† · PM | 🛠️ Makes it | "Write a user story for…" · "Convert this requirement into a story" |
 | Co-author a doc, proposal, or decision doc in structured rounds | `doc-coauthoring`† · Thinking | 🧭 Guides it | "Help me write a proposal" · "Let's draft this spec together" |
 | **Strategy & planning** | | | |
@@ -48,10 +48,10 @@ phrase in the last column and Claude loads the matching one.
 | Write a status report, leadership update, FAQ, or incident report | `internal-comms`† · Thinking | 🛠️ Makes it | "Write the weekly update" · "Draft the incident report" |
 | **Writing quality** | | | |
 | Tighten any prose with Strunk's rules | `writing-clearly-and-concisely`† · Thinking | 🔍 Checks it | "Make this clearer" · "Tighten this up" |
-| Strip AI-isms from a draft | `avoid-ai-writing` · Account | 🔍 Checks it | "Make this sound less like AI" · "Audit this for AI tells" |
+| Strip AI-isms from a draft | `avoid-ai-writing`† · Thinking | 🔍 Checks it | "Make this sound less like AI" · "Audit this for AI tells" |
 | Remove generic AI patterns from headlines, CTAs, and copy | `antislop-copywriting`† · Coding | 🔍 Checks it | "Rewrite this landing copy" · "This headline sounds generic" |
 | **Review before shipping** | | | |
-| Second pass on any artifact for gaps, errors, and risk | `checker-agent` · Account | 🔍 Checks it | "Check this" · "Is this ready to send?" · "What could go wrong?" |
+| Second pass on any artifact for gaps, errors, and risk | `checker-agent` · Thinking | 🔍 Checks it | "Check this" · "Is this ready to send?" · "What could go wrong?" |
 | Add follow-up questions that help you verify an answer | `discernment-nudge`† · Thinking | 🔍 Checks it | *(fires on its own after substantive advice or drafts)* |
 | **Decisions & reflection** | | | |
 | Pressure-test a decision you're facing | `decision-partner` · Thinking | 🤔 Questions you | "Should I…?" · "I'm torn between…" · "Thinking about taking the offer" |
@@ -78,7 +78,7 @@ phrase in the last column and Claude loads the matching one.
 | Work in an isolated git worktree | `using-git-worktrees`† · Coding | 🧭 Guides it | "Start this on a separate branch" |
 | **Coding: debug, review & finish** | | | |
 | Find the root cause before proposing a fix | `systematic-debugging`† · Coding | 🧭 Guides it | "This test is failing" · "Why is this broken?" |
-| Figure out why an automation, sync, or token stopped working | `diagnose-broken-integration` · Account | 🧭 Guides it | "X stopped working" · "Why is the build failing?" · "Token expired" |
+| Figure out why an automation, sync, or token stopped working | `diagnose-broken-integration` · Thinking | 🧭 Guides it | "X stopped working" · "Why is the build failing?" · "Token expired" |
 | Ask for a code review before merging | `requesting-code-review`† · Coding | 🔍 Checks it | "Review my changes" · "Ready to merge?" |
 | Handle review feedback with verification, not blind agreement | `receiving-code-review`† · Coding | 🔍 Checks it | "Address these review comments" |
 | Prove work passes before claiming it's done | `verification-before-completion`† · Coding | 🔍 Checks it | *(fires before any "done" or "fixed" claim)* |
@@ -101,19 +101,3 @@ phrase in the last column and Claude loads the matching one.
 | Capture a lesson so Claude doesn't repeat a mistake | `self-improve` · Hub | ⚙️ Runs the setup | "Remember this" · "Don't make that mistake again" |
 | Learn how to find and use skills (loads at conversation start) | `using-superpowers`† · Coding | ⚙️ Runs the setup | *(fires at the start of every conversation)* |
 | Write or edit a skill and test that it works | `writing-skills`† · Coding | ⚙️ Runs the setup | "Create a skill for…" · "Why isn't this skill triggering?" |
-
----
-
-## Housekeeping notes from this review
-
-- **Six skills exist only in the Claude account**, with no copy in git: `riley-context`, `fdd-writer`,
-  `deterministic-logic-spec`, `checker-agent`, `diagnose-broken-integration`, `avoid-ai-writing`. If the
-  account lost them, nothing would restore them. Run `publish-skill-to-github` on each.
-- **`riley-thinking-skills` `main` is missing `mine/` and `vendored/`.** Only the four partner skills
-  (under `.claude/skills/`) are on `main`. The full 17-skill layout sits on the unmerged
-  `claude/split-into-thinking-skills` branch, so the hub marketplace, which reads `main`, can't install
-  `riley-thinking-skills` or `anthropic-example-skills` until that branch merges.
-- **README counts are stale.** Coding now holds 25 skills (19 plus the six `antislop` skills added
-  2026-09-13), not 19. Thinking holds 17 on its split branch, not 18.
-- **The hub marketplace has no `antislop` entry.** `riley-coding-skills` lists it as its own plugin, but
-  this repo's `marketplace.json` doesn't source it, so installing from the hub skips all six antislop skills.
