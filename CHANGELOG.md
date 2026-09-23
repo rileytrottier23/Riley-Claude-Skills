@@ -2,6 +2,13 @@
 
 Newest first.
 
+- 2026-09-23 — Added `SKILLS.md`, a cheat sheet of all 66 skills grouped by task, with kind and trigger
+  phrases. The review behind it found four gaps, now fixed: five account-only skills published to the
+  domain repos (`fdd-writer` and `deterministic-logic-spec` to pm; `checker-agent`,
+  `diagnose-broken-integration`, and vendored `avoid-ai-writing` to thinking; `riley-context` stays
+  account-only because it holds personal details); the marketplace now sources the `antislop` and
+  `avoid-ai-writing` plugins; README counts corrected to 18 / 25 / 20. Bumped the marketplace to 2.3.0.
+
 - 2026-09-12 — Added `self-improve` under `control-plane/`: a global, cross-project
   version of the "reflecting plugin appends lessons to CLAUDE.md" pattern. Unlike a
   per-project version, a single global memory file is loaded unconditionally into

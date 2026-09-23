@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place, plus the control-plane tooling that backs up routines and settings and captures cross-session learnings. Each domain plugin is sourced from its home repo.",
-    "version": "2.2.0"
+    "version": "2.3.0"
   },
   "plugins": [
     {
@@ -18,7 +18,7 @@
     },
     {
       "name": "riley-pm-skills",
-      "description": "Riley's own product-management skills: PRD and spec writing, stakeholder decks, competitive research reports.",
+      "description": "Riley's own product-management skills: PRD, FDD, and business-rule spec writing, stakeholder decks, competitive research reports.",
       "source": { "source": "github", "repo": "rileytrottier23/riley-pm-skills" },
       "strict": false,
       "skills": ["./mine/"]
@@ -52,8 +52,15 @@
       "skills": ["./vendored/anthropic/"]
     },
     {
+      "name": "antislop",
+      "description": "Miqdad Badjuber's anti-slop (MIT): a filter that stops AI coding agents from shipping generic UI, copy, and code comments, in 6 skills plus a mandatory delivery gate.",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
+      "strict": false,
+      "skills": ["./vendored/miqdadbadjuber-antislop/"]
+    },
+    {
       "name": "riley-thinking-skills",
-      "description": "Riley's own thinking and general skills: decision-partner, decision-review, practice-partner, reflection-partner, Canadian personal-finance modelling, chess coaching, Quebec French tutoring, and the skill-publishing tool.",
+      "description": "Riley's own thinking and general skills: decision-partner, decision-review, practice-partner, reflection-partner, Canadian personal-finance modelling, chess coaching, Quebec French tutoring, a pre-ship quality checker, a broken-integration diagnostician, and the skill-publishing tool.",
       "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
       "strict": false,
       "skills": ["./mine/"]
@@ -71,6 +78,13 @@
       "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
       "strict": false,
       "skills": ["./vendored/obra-elements-of-style/"]
+    },
+    {
+      "name": "avoid-ai-writing",
+      "description": "Conor Bronsdon's avoid-ai-writing (MIT): audits and rewrites prose to strip AI writing patterns, with detect, rewrite, and edit modes and voice profiles.",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
+      "strict": false,
+      "skills": ["./vendored/conorbronsdon-avoid-ai-writing/"]
     }
   ]
 }
