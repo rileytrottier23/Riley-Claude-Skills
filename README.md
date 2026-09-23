@@ -14,6 +14,9 @@ matches what you're asking for. They work in Claude Projects, Claude Code, and C
 also a standalone plugin marketplace, so you can install a whole domain on its own and `git pull` picks up
 updates.
 
+**Looking for a skill?** See the [Skills Cheat Sheet](./SKILLS.md): every skill in one table, grouped by
+what you're trying to do, with its kind and the phrases that trigger it.
+
 ## The three repos
 
 | Repo | What's in it | Skills |
