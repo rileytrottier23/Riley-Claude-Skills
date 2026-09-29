@@ -105,6 +105,8 @@ function Install-Hook {
     $entry = New-Object PSObject -Property @{ hooks = @((New-Object PSObject -Property @{ type = 'command'; command = $cmd })) }
     $cfg.hooks.SessionStart = @($cfg.hooks.SessionStart) + @($entry)
     if ($raw.Trim()) { Copy-Item $Settings "$Settings.bak" -Force }
+    # Windows PowerShell 5.1 can serialize arrays as {"value":[...],"Count":n}; this is the standard fix.
+    if ($PSVersionTable.PSVersion.Major -lt 6) { Remove-TypeData System.Array -ErrorAction SilentlyContinue }
     Write-Text $Settings (($cfg | ConvertTo-Json -Depth 32) + "`n")
     Say 'Auto-sync: on. Every new Claude Code session on this machine re-syncs your learnings.'
 }
