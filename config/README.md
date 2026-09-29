@@ -16,6 +16,8 @@ enabled, and the personal preferences that make the harness feel like Riley's.
   `~/.claude/CLAUDE.md` (Riley's account-wide memory, loaded in every session everywhere).
   Kept and pruned by the `self-improve` skill under `control-plane/`. See that file for
   what belongs here versus in a promoted skill versus a project's own `CLAUDE.md`.
+  One pasted line per machine syncs it and keeps it synced — see that file's
+  "Adopting this on a machine" section and `scripts/sync-claude-setup.{ps1,sh}`.
 
 ## What the baseline configures
 

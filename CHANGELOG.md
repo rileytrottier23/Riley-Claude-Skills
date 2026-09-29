@@ -2,6 +2,12 @@
 
 Newest first.
 
+- 2026-09-29 — Added `scripts/sync-claude-setup.ps1` (Windows) and `.sh` (Mac/Linux). One pasted
+  line copies the `## Learnings` section of `config/global-learnings.md` into `~/.claude/CLAUDE.md` and
+  installs a SessionStart hook that re-syncs every local session, so new learnings need no manual steps.
+  `self-improve` now treats the repo file as the source of truth and never hands over multi-step terminal
+  walkthroughs: it does the work itself or gives one line for the machine's OS.
+
 - 2026-09-23 — Added `SKILLS.md`, a cheat sheet of all 66 skills grouped by task, with kind and trigger
   phrases. The review behind it found four gaps, now fixed: five account-only skills published to the
   domain repos (`fdd-writer` and `deterministic-logic-spec` to pm; `checker-agent`,
