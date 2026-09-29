@@ -19,7 +19,7 @@ repo is public, and this file is exactly as visible as `README.md`.
 
 ## Learnings
 
-*(empty — nothing captured yet)*
+- 2026-09-29: **Task list for shared work:** whenever Riley and Claude work on a task with 3+ steps, create a task list before the first real step, tick items off as they finish, and make the last item checking the work. For reply layout (answer first, tables, scorecards, decisions set apart, diagrams for flows), use the `visual-output` skill.
 
 ## Adopting this on a machine
 
