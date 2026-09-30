@@ -39,20 +39,49 @@ near-duplicate.
 
 ## Step 2 — write the global lesson
 
-1. Append one short, dated bullet to `~/.claude/CLAUDE.md` under a `##
-   Learnings` heading (create the heading if it doesn't exist):
+1. Add one short, dated bullet under `## Learnings` in **`config/global-learnings.md`**
+   in this hub repo. **This file is the source of truth**: every machine copies
+   its `## Learnings` section into `~/.claude/CLAUDE.md` automatically.
    ```
    - 2026-09-12: Riley wants push confirmations even when a prior push was approved — approval doesn't carry across sessions.
    ```
    One line. No transcript excerpts, no code blocks, no names of clients or
    companies, no repo-specific detail — see **Never write** below.
-2. If the file's `## Learnings` section is past ~40 lines, this is a prune
-   pass, not just an append (see Step 4) — don't let it grow unbounded.
-3. Mirror the same section into **`config/global-learnings.md`** in this hub
-   repo, so it's versioned and diffable the same way `settings.baseline.json`
-   is. Commit and push (see **Commit and push** below) — this is what makes a
-   bad global lesson catchable and revertible instead of silently changing
-   every future session forever.
+2. If the section is past ~40 lines, this is a prune pass, not just an
+   append (see Step 4) — don't let it grow unbounded.
+3. Commit and push (see **Commit and push** below). The diff is what makes a
+   bad global lesson catchable and revertible.
+4. If this session runs on Riley's own machine, also run the one-line sync
+   below there, so the lesson applies right away. In a cloud session, don't
+   touch Riley's machines — they pick it up on their next Claude Code session.
+
+## Getting changes onto Riley's machines — never a walkthrough
+
+Riley wants setup work automated or done in one click, not a list of
+terminal steps. Anything this skill (or any control-plane skill) changes
+reaches a machine this way:
+
+| Situation | What you do |
+|---|---|
+| Machine already set up | Nothing. A SessionStart hook runs `scripts/sync-claude-setup` at the start of every local Claude Code session and copies the latest learnings in. |
+| Machine not set up yet | Give Riley **one line** to paste, for the machine's OS (below). It syncs now and installs the hook. |
+| Riley already pasted it and it failed | Ask for the exact error. Don't send a new multi-step fix. |
+
+**Windows (PowerShell) — Riley's laptop:**
+```powershell
+irm https://raw.githubusercontent.com/rileytrottier23/Riley-Claude-Skills/main/scripts/sync-claude-setup.ps1 | iex
+```
+**Mac / Linux:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/rileytrottier23/Riley-Claude-Skills/main/scripts/sync-claude-setup.sh | bash
+```
+
+Rules for anything Riley has to run:
+- **Do it yourself first.** Only hand over what truly has to run on Riley's machine.
+- **One line, for the right OS.** Riley's laptop runs Windows, so default to PowerShell. Never give bash to a Windows machine.
+- **No slash commands as setup steps.** `/plugin` and similar don't work in cloud or desktop-app sessions. Plugins auto-update via `autoUpdatesChannel: latest` in the settings baseline.
+- **Check before asking Riley to install a skill.** A skill listed as `anthropic-skills:<name>` in your available skills is already on the account and loads everywhere. Say so instead of prescribing an install.
+- **Know the reach.** `~/.claude/CLAUDE.md` only affects local Claude Code sessions. Cloud sessions and the Claude app don't read it; for those, say so rather than implying the lesson applies there.
 
 **Never write:** secrets, tokens, client/company names, proprietary business
 logic, anything from a confidential codebase, or a lesson that's only true
@@ -78,7 +107,7 @@ when relevant, which a global memory dump can't offer.
 
 ## Step 4 — periodic review (when asked, or if `## Learnings` is getting long)
 
-1. Read `~/.claude/CLAUDE.md`'s `## Learnings` section.
+1. Read the `## Learnings` section of `config/global-learnings.md` (the source of truth).
 2. Drop anything stale, superseded, or contradicted by a newer line.
 3. Anything that's really a recurring domain pattern hiding in the global
    file → run Step 3 to promote it out, then delete the global bullet.
@@ -86,7 +115,7 @@ when relevant, which a global memory dump can't offer.
    "be terse" lesson from coding work and a "be thorough" lesson from FDD
    writing are both correct in context; a global bullet that states either
    as a blanket rule is wrong and should be scoped or removed.
-5. Re-sync `config/global-learnings.md` with the cleaned-up file and push.
+5. Commit and push. Machines pick up the cleaned-up section on their next session.
 
 ## Preflight, commit, and push
 
