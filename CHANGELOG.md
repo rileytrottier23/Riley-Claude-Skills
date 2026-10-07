@@ -2,6 +2,12 @@
 
 Newest first.
 
+- 2026-10-07 — Routines backup refreshed. Added `weekly-review.json` and
+  `weekly-skills-marketplace-check.json`. Four routines no longer on the account moved to
+  `routines/retired/` with their state files and docs (chess review, First Light Brief /
+  Throughline, weekly rollup, weekly task review). The two shared-expenses routines are
+  deliberately not backed up in this public repo.
+
 - 2026-10-07 — `SKILLS.md` now covers all 69 skills: added rows for `context-engineering-advisor`,
   `vibe-design-loop`, `visual-output`, and `code-cowork-handoff`.
 

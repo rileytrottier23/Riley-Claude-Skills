@@ -39,7 +39,7 @@ commit every run even when nothing meaningful changed.
 Routines can only be recreated through the Claude account (the JSON here is a
 record, not a live object). Ask Claude:
 
-> "Recreate the routine in `routines/weekly-rollup-dashboard-refresh.json`."
+> "Recreate the routine in `routines/weekly-review.json`."
 
 Claude reads the file and calls `create_trigger` with the `restore` block —
 `name`, `prompt`, `initiation`, the schedule, and `create_new_session_on_fire`
@@ -68,13 +68,11 @@ no manual steps, just not unattended.
 
 ## Companion state files
 
-Not every file here is a routine backup. `chess-weekly-review-artifact.json` holds the
-current URL of the Artifact that the *Weekly Chess.com Review* routine republishes each
-week — the routine fetches it (via this repo's public raw URL, no auth needed) at the
-start of every run and republishes to that same URL, so the link stays stable instead of
-a fresh artifact appearing every Monday. It's state the routine reads, not a
-`create_trigger` restore spec. Only edit it by hand if the routine starts pointing at a
-different artifact.
+Not every file here need be a routine backup. A companion state file has no `restore`
+block: it holds something a routine reads at run time, such as the current URL of an
+Artifact it republishes, so the link stays stable between runs. The script never writes
+or prunes these. There are none in use right now; the ones for retired routines are in
+`retired/`.
 
 ## What not to commit here
 
