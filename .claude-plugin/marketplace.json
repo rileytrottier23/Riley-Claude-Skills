@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place, plus the control-plane tooling that backs up routines and settings and captures cross-session learnings. Each domain plugin is sourced from its home repo.",
-    "version": "2.3.0"
+    "version": "2.4.0"
   },
   "plugins": [
     {
@@ -57,6 +57,13 @@
       "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
       "strict": false,
       "skills": ["./vendored/miqdadbadjuber-antislop/"]
+    },
+    {
+      "name": "riley-coding-skills",
+      "description": "Riley's own coding skills: code-cowork-handoff (spots Code vs Cowork work and writes a handoff file) and vibe-design-loop (pushes AI-generated UI past the generic look).",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
+      "strict": false,
+      "skills": ["./mine/"]
     },
     {
       "name": "riley-thinking-skills",

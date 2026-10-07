@@ -23,7 +23,7 @@ what you're trying to do, with its kind and the phrases that trigger it.
 |---|---|---|
 | [**riley-pm-skills**](https://github.com/rileytrottier23/riley-pm-skills) | Product & PM — PRDs, FDDs and rule specs, stakeholder decks, competitive research, plus vendored PM collections (Dean Peters, Gene Dai) | 18 |
 | [**riley-coding-skills**](https://github.com/rileytrottier23/riley-coding-skills) | Coding & engineering — TDD, debugging, planning, code review, git worktrees (superpowers), MCP building, frontend/webapp tooling, anti-slop filters | 27 |
-| [**riley-thinking-skills**](https://github.com/rileytrottier23/riley-thinking-skills) | Everything else — decision/reflection/practice partners, personal-life modelling, writing & comms, AI-writing cleanup, pre-ship checks, integration debugging, creative/design, and the skill-publishing tool | 20 |
+| [**riley-thinking-skills**](https://github.com/rileytrottier23/riley-thinking-skills) | Everything else — decision/reflection/practice partners, personal-life modelling, writing & comms, AI-writing cleanup, pre-ship checks, integration debugging, creative/design, and the skill-publishing tool | 21 |
 
 Each repo splits its skills into **`mine/`** (my own work, MIT) and **`vendored/`** (other people's,
 pinned to an upstream commit under their original license), so "who wrote this and under what license" is
@@ -31,7 +31,7 @@ answerable at a glance.
 
 ## Install
 
-**Everything, from this hub** (one marketplace, all 11 plugins — the domain plugins sourced from the three
+**Everything, from this hub** (one marketplace, all 12 plugins — the domain plugins sourced from the three
 repos, plus the hub's own `riley-control-plane`):
 
 ```

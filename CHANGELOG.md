@@ -2,6 +2,10 @@
 
 Newest first.
 
+- 2026-10-07 — The marketplace now sources the `riley-coding-skills` plugin (`code-cowork-handoff`,
+  `vibe-design-loop`) from the coding repo, so the hub covers all 12 plugins. README counts corrected
+  to 12 plugins and 21 thinking skills. Bumped the marketplace to 2.4.0.
+
 - 2026-09-29 — Added `scripts/sync-claude-setup.ps1` (Windows) and `.sh` (Mac/Linux). One pasted
   line copies the `## Learnings` section of `config/global-learnings.md` into `~/.claude/CLAUDE.md` and
   installs a SessionStart hook that re-syncs every local session, so new learnings need no manual steps.
