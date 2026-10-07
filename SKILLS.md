@@ -35,6 +35,7 @@ phrase in the last column and Claude loads the matching one.
 | Pick a prioritization framework (RICE, ICE, value/effort) | `prioritization-advisor`† · PM | 🧭 Guides it | "Which prioritization framework should we use?" · "RICE or value/effort?" |
 | Decide whether an AI product idea deserves investment | `recommendation-canvas`† · PM | 🧭 Guides it | "Is this AI feature worth building?" · "Compare these AI options" |
 | Assess whether your team is AI-first or AI-shaped | `ai-shaped-readiness-advisor`† · PM | 🧭 Guides it | "How AI-mature is my team?" · "Which AI capability do we build next?" |
+| Fix an AI workflow that feels bloated, brittle, or hard to steer | `context-engineering-advisor`† · PM | 🧭 Guides it | "This prompt keeps getting longer" · "Why is this agent hard to steer?" |
 | Diagnose SaaS metrics, critique a PRD, plan PLG growth, PM career moves | `product-manager-skills`† · PM | 🧭 Guides it | "Critique this PRD" · "Why is our NRR dropping?" · "PLG strategy for…" |
 | **Discovery & validation** | | | |
 | Run a discovery cycle from hypothesis to validated solution | `discovery-process`† · PM | 🧭 Guides it | "Validate this before we build" · "Activation dropped — find out why" |
@@ -85,6 +86,7 @@ phrase in the last column and Claude loads the matching one.
 | Decide how to integrate a finished branch (merge, PR, clean up) | `finishing-a-development-branch`† · Coding | 🧭 Guides it | "I'm done with this branch" · "Wrap this up" |
 | **Coding: frontend & tooling** | | | |
 | Distinctive visual design for new UI | `frontend-design`† · Coding | 🛠️ Makes it | "Design a landing page" · "This UI looks generic" |
+| Push AI-built UI past the generic look with a variety, critique, and polish loop | `vibe-design-loop` · Coding | 🧭 Guides it | "Make this look more premium" · "This looks like every other AI site" |
 | Multi-component React + Tailwind + shadcn artifact | `web-artifacts-builder`† · Coding | 🛠️ Makes it | "Build a dashboard artifact with routing" |
 | Test a local web app with Playwright | `webapp-testing`† · Coding | 🔍 Checks it | "Test the login flow" · "Screenshot the page" |
 | Build an MCP server | `mcp-builder`† · Coding | 🧭 Guides it | "Build an MCP server for the X API" |
@@ -96,6 +98,8 @@ phrase in the last column and Claude loads the matching one.
 | Remove generic AI comments without touching code | `antislop-code`† · Coding | 🔍 Checks it | "Clean up the comments in this file" |
 | **Skills & setup** | | | |
 | Load your Workday role, projects, and preferences | `riley-context` · Account | ⚙️ Runs the setup | "Load my context" · *(fires on Workday, Revenue Center, FDD topics)* |
+| Lay out replies to scan: answer first, task lists, tables, scorecards, diagrams | `visual-output` · Thinking | ⚙️ Runs the setup | *(fires on any reply with more than one part)* |
+| Spot work that fits Claude Code or Cowork better and write a handoff file | `code-cowork-handoff` · Coding | ⚙️ Runs the setup | "Hand this off to Claude Code" · "Should this be in Cowork?" |
 | Publish a new or edited skill to the right repo | `publish-skill-to-github` · Thinking | ⚙️ Runs the setup | "Push this skill" · "Sync my skills" · "Update the skills README" |
 | Back up or restore routines and settings | `backup-claude-setup` · Hub | ⚙️ Runs the setup | "Back up my Claude setup" · "Restore my routines" |
 | Capture a lesson so Claude doesn't repeat a mistake | `self-improve` · Hub | ⚙️ Runs the setup | "Remember this" · "Don't make that mistake again" |
