@@ -2,6 +2,9 @@
 
 Newest first.
 
+- 2026-10-07 — `SKILLS.md` now covers all 69 skills: added rows for `context-engineering-advisor`,
+  `vibe-design-loop`, `visual-output`, and `code-cowork-handoff`.
+
 - 2026-10-07 — The marketplace now sources the `riley-coding-skills` plugin (`code-cowork-handoff`,
   `vibe-design-loop`) from the coding repo, so the hub covers all 12 plugins. README counts corrected
   to 12 plugins and 21 thinking skills. Bumped the marketplace to 2.4.0.
