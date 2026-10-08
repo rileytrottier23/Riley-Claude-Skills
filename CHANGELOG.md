@@ -2,6 +2,11 @@
 
 Newest first.
 
+- 2026-10-08 — Weekly Review now checks the three skills saved in the Claude app as fixed copies
+  (`self-improve`, `backup-setup`, `avoid-ai-writing`) against their repo versions and flags drift;
+  `routines/weekly-review.json` updated to match. In the app, 15 standalone duplicates of plugin
+  skills were removed, so the plugin versions are the only ones left.
+
 - 2026-10-07 — Routines backup refreshed. Added `weekly-review.json` and
   `weekly-skills-marketplace-check.json`. Four routines no longer on the account moved to
   `routines/retired/` with their state files and docs (chess review, First Light Brief /
