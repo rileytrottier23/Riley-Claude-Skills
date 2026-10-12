@@ -68,6 +68,7 @@ phrase in the last column and Claude loads the matching one.
 | Animated GIF sized for Slack | `slack-gif-creator`† · Thinking | 🛠️ Makes it | "Make me a GIF of X for Slack" |
 | Apply a preset or custom theme to slides, docs, or pages | `theme-factory`† · Thinking | 🛠️ Makes it | "Theme this deck" · "Give this a different look" |
 | Apply Anthropic brand colors and type | `brand-guidelines`† · Thinking | 🛠️ Makes it | "Use Anthropic branding on this" |
+| Branded diagrams and charts as HTML/SVG: architecture, flowchart, timeline, Sankey, and more | `diagram-design`† · Thinking | 🛠️ Makes it | "Diagram this architecture" · "Draw a flowchart of…" |
 | Find a Claude Academy course for a how-to question | `claude-academy-guide`† · Thinking | 🎓 Coaches you | "How do I use Claude Projects?" · "Getting started with Claude Code" |
 | **Coding: plan & build** | | | |
 | Explore intent and design before building anything | `brainstorming`† · Coding | 🧭 Guides it | "I want to add a feature that…" · "Let's build X" |

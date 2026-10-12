@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place, plus the control-plane tooling that backs up routines and settings and captures cross-session learnings. Each domain plugin is sourced from its home repo.",
-    "version": "2.4.0"
+    "version": "2.5.0"
   },
   "plugins": [
     {
@@ -92,6 +92,13 @@
       "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
       "strict": false,
       "skills": ["./vendored/conorbronsdon-avoid-ai-writing/"]
+    },
+    {
+      "name": "diagram-design",
+      "description": "Cathryn Lavery's diagram-design (MIT): editorial-quality diagrams and charts as self-contained HTML and SVG, matched to your brand's colours and fonts.",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
+      "strict": false,
+      "skills": ["./vendored/cathrynlavery-diagram-design/"]
     }
   ]
 }
