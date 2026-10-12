@@ -2,6 +2,11 @@
 
 Newest first.
 
+- 2026-10-12 — Weekly tidy: added the new `diagram-design` skill (vendored in riley-thinking-skills) to the
+  marketplace as its own plugin, bringing the hub to 13 plugins. `SKILLS.md` now covers all 70 skills.
+  README corrected to 22 thinking skills and 13 plugins. Bumped the marketplace to 2.5.0. No duplicate
+  skills found across the four repos.
+
 - 2026-10-08 — Weekly Review now checks the three skills saved in the Claude app as fixed copies
   (`self-improve`, `backup-setup`, `avoid-ai-writing`) against their repo versions and flags drift;
   `routines/weekly-review.json` updated to match. In the app, 15 standalone duplicates of plugin
