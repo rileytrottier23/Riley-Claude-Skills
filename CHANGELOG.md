@@ -2,6 +2,9 @@
 
 Newest first.
 
+- 2026-10-14 — Hub `riley-thinking-skills` blurb now lists `visual-output`. Weekly Review no longer flags
+  `riley-context` as missing from GitHub (it is account-only by design).
+
 - 2026-10-14 — The marketplace now sources the `diagram-design` plugin (Cathryn Lavery's
   diagram-design, vendored in the thinking repo), so the hub covers all 13 plugins. Weekly Review's
   chat step now loads the past-chat tools by name before giving up, with a memory-store fallback;
