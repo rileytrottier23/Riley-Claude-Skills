@@ -67,6 +67,7 @@ phrase in the last column and Claude loads the matching one.
 | Generative art with p5.js | `algorithmic-art`† · Thinking | 🛠️ Makes it | "Make generative art" · "Flow field of…" |
 | Animated GIF sized for Slack | `slack-gif-creator`† · Thinking | 🛠️ Makes it | "Make me a GIF of X for Slack" |
 | Apply a preset or custom theme to slides, docs, or pages | `theme-factory`† · Thinking | 🛠️ Makes it | "Theme this deck" · "Give this a different look" |
+| Branded diagrams and charts as HTML/SVG: architecture, flowcharts, sequence, Gantt, Sankey and more | `diagram-design`† · Thinking | 🛠️ Makes it | "Diagram this architecture" · "Make a flowchart of…" |
 | Apply Anthropic brand colors and type | `brand-guidelines`† · Thinking | 🛠️ Makes it | "Use Anthropic branding on this" |
 | Find a Claude Academy course for a how-to question | `claude-academy-guide`† · Thinking | 🎓 Coaches you | "How do I use Claude Projects?" · "Getting started with Claude Code" |
 | **Coding: plan & build** | | | |

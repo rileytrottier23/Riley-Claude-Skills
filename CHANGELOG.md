@@ -2,6 +2,8 @@
 
 Newest first.
 
+- 2026-10-14 — `SKILLS.md` now lists `diagram-design` under Creative & design.
+
 - 2026-10-14 — Hub `riley-thinking-skills` blurb now lists `visual-output`. Weekly Review no longer flags
   `riley-context` as missing from GitHub (it is account-only by design).
 
