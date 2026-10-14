@@ -31,7 +31,7 @@ answerable at a glance.
 
 ## Install
 
-**Everything, from this hub** (one marketplace, all 12 plugins — the domain plugins sourced from the three
+**Everything, from this hub** (one marketplace, all 13 plugins — the domain plugins sourced from the three
 repos, plus the hub's own `riley-control-plane`):
 
 ```

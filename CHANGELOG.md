@@ -2,6 +2,11 @@
 
 Newest first.
 
+- 2026-10-14 — The marketplace now sources the `diagram-design` plugin (Cathryn Lavery's
+  diagram-design, vendored in the thinking repo), so the hub covers all 13 plugins. Weekly Review's
+  chat step now loads the past-chat tools by name before giving up, with a memory-store fallback;
+  `routines/weekly-review.json` updated to match. Bumped the marketplace to 2.5.0.
+
 - 2026-10-08 — Weekly Review now checks the three skills saved in the Claude app as fixed copies
   (`self-improve`, `backup-setup`, `avoid-ai-writing`) against their repo versions and flags drift;
   `routines/weekly-review.json` updated to match. In the app, 15 standalone duplicates of plugin
