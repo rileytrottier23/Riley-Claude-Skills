@@ -2,6 +2,10 @@
 
 Newest first.
 
+- 2026-10-15 — Routine backups (`routines/`) and `scripts/format_routines.py` moved to a private repo.
+  `backup-claude-setup` now writes routines there and only settings here. Routine prompts describe which
+  personal sources Claude reads, so they no longer belong in a public repo.
+
 - 2026-10-14 — `SKILLS.md` now lists `diagram-design` under Creative & design.
 
 - 2026-10-14 — Hub `riley-thinking-skills` blurb now lists `visual-output`. Weekly Review no longer flags

@@ -6,8 +6,7 @@
 > Prefer just one domain? Add that repo's marketplace directly instead.
 >
 > This hub is also the **control plane**: it backs up the parts of the setup that don't live in a skill
-> repo — [routines](#control-plane-keep-the-whole-setup-in-git) (scheduled triggers) and
-> [Claude Code settings](./config). See [Control plane](#control-plane-keep-the-whole-setup-in-git).
+> repo — [Claude Code settings](./config) here, and routines (scheduled triggers) in a private repo. See [Control plane](#control-plane-keep-the-whole-setup-in-git).
 
 Each skill is a folder containing a `SKILL.md`: an instruction set Claude loads when its description
 matches what you're asking for. They work in Claude Projects, Claude Code, and Cowork. Each repo below is
@@ -57,21 +56,21 @@ repository. Already have the `riley-claude-skills` marketplace from before? Just
 
 Skills are only part of the setup. Two other things live only in the Claude account and vanish if it's
 lost — **routines** (scheduled triggers) and **Claude Code settings** (marketplaces, enabled plugins,
-preferences). This hub versions both, so the entire setup is expandable, recoverable, and portable.
+preferences). Settings are versioned here. Routines are backed up to a private repo, because their
+prompts describe which personal sources Claude reads.
 
 | Folder | Holds | Backed up / restored by |
 |---|---|---|
-| [`routines/`](./routines) | Every scheduled trigger, as restore-ready JSON | `backup-claude-setup` skill → `list_triggers` → `scripts/format_routines.py` |
 | [`config/`](./config) | A portable, secret-free `settings.json` baseline | `backup-claude-setup` skill |
-| `scripts/` | The formatter that shapes `list_triggers` output into `routines/` | — |
+| `scripts/` | Settings sync helpers | — |
 
 Four skills, one motion each — say the phrase and it happens, no clicking through menus:
 
 - **"push this skill"** → `publish-skill-to-github` routes a new/edited skill to the right domain repo
   (`riley-pm-skills` / `riley-coding-skills` / `riley-thinking-skills`), under `mine/` or `vendored/`, and
   updates that repo's README, marketplace, and changelog.
-- **"back up my routines / settings"** → `backup-claude-setup` snapshots routines and settings into this
-  hub and commits them. It also **restores**: "recreate the routine in `routines/<slug>.json`."
+- **"back up my routines / settings"** → `backup-claude-setup` snapshots settings into this hub and
+  routines into the private repo, and commits them. It also **restores** either one.
 - **"remember this" / "don't make that mistake again"** → `self-improve` captures a lesson from the
   session and routes it: a universal preference goes to `~/.claude/CLAUDE.md` (mirrored here as
   `config/global-learnings.md` so it's diffable and revertible), a recurring domain pattern gets promoted

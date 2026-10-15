@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "riley-control-plane",
-      "description": "Hub tooling that keeps the whole setup in git: backs up routines (scheduled triggers) and Claude Code settings to this repo, restores them, and captures cross-session learnings into versioned global memory or a promoted skill. Pairs with publish-skill-to-github (which routes skills to the domain repos).",
+      "description": "Hub tooling that keeps the whole setup in git: backs up Claude Code settings to this repo and routines (scheduled triggers) to a private repo, restores them, and captures cross-session learnings into versioned global memory or a promoted skill. Pairs with publish-skill-to-github (which routes skills to the domain repos).",
       "source": { "source": "github", "repo": "rileytrottier23/Riley-Claude-Skills" },
       "strict": false,
       "skills": ["./control-plane/"]
