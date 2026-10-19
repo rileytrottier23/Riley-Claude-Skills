@@ -2,6 +2,9 @@
 
 Newest first.
 
+- 2026-10-19 — Weekly tidy: README now shows 22 thinking skills (was 21 after `diagram-design` was added).
+  No duplicate skills found across the four repos.
+
 - 2026-10-15 — Routine backups (`routines/`) and `scripts/format_routines.py` moved to a private repo.
   `backup-claude-setup` now writes routines there and only settings here. Routine prompts describe which
   personal sources Claude reads, so they no longer belong in a public repo.
