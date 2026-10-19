@@ -10,6 +10,9 @@ His **routines** and **Claude Code settings** live only in his account — nothi
 versions them unless this skill does. This skill snapshots **routines** into the
 private **`rileytrottier23/claude-private-routines`** repo and **settings** into the
 public **`rileytrottier23/Riley-Claude-Skills`** hub repo, and restores them on request.
+Run it whenever Riley asks, and at the end of any session that created, changed, or
+deleted a routine or changed his settings. For backing up a SKILL itself, use
+`publish-skill-to-github` instead.
 
 **Routines never go in a public repo.** Their prompts describe which personal sources
 Claude reads (mail, calendar, journal, task lists). If the private repo can't be
@@ -27,11 +30,11 @@ Scope, so the two skills don't collide:
 
 `git -C <clone> push --dry-run origin main` (or the designated branch) answers both.
 
-- **Local terminal on Riley's machine:** if the hub repo is checked out, `git pull`
+- **Local terminal on Riley's machine:** if the repo is checked out, `git pull`
   and work in it directly.
 - **Cloud / remote session:** the container can't see his machine. Read is
-  anonymous; **write needs the repo in the session's authorized set.** If an
-  `add_repo` tool exists, call it with `access: "push"` for
+  anonymous for the public hub; the private repo and all writes need the repo in the
+  session's authorized set. If an `add_repo` tool exists, call it with `access: "push"` for
   `rileytrottier23/claude-private-routines` (routines) and/or
   `rileytrottier23/Riley-Claude-Skills` (settings). If push is still blocked, do the work,
   commit, and hand back a `git format-patch` (or the changed files) with
@@ -66,7 +69,7 @@ output so the backup matches reality, deletions included.
 
 ## Back up settings
 
-`config/settings.baseline.json` is a portable, secret-free `settings.json`
+`config/settings.baseline.json` in the hub is a portable, secret-free `settings.json`
 (marketplaces, enabled plugins, preferences). It changes rarely. Refresh it only
 when the real setup changed:
 
@@ -90,7 +93,7 @@ cd /tmp/rcs && git add config/   && git commit -m "Back up settings" && git push
 Before pushing to the private repo, confirm it is still private
 (`get_file_contents` / repo search shows `"private": true`).
 
-Straight-to-main is the convention for this repo. If a session's own harness rules
+Straight-to-main is the convention for these repos. If a session's own harness rules
 require a branch + PR, follow those instead (session override, not a repo rule).
 If the push is rejected because main moved, `git pull --rebase` once and retry.
 
