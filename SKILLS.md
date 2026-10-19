@@ -1,21 +1,21 @@
 # Skills Cheat Sheet
 
-Every skill across the hub and the three domain repos, plus the one that lives only in the Claude
-account. Pick a skill by what you're trying to do. You never have to name a skill: say something like the
+Every skill across the hub and the three domain repos, plus the ones that live only in the Claude
+account or a private repo. Pick a skill by what you're trying to do. You never have to name a skill: say something like the
 phrase in the last column and Claude loads the matching one.
 
 ## Six kinds of skills
 
 | Kind | What happens when it fires | Examples |
 |---|---|---|
-| 🛠️ **Makes it** | Produces the deliverable itself: a PRD, a deck, a report, a spec, an artifact | `prd-spec-writer`, `stakeholder-deck-builder`, `competitive-research-report`, `fdd-writer` |
+| 🛠️ **Makes it** | Produces the deliverable itself: a PRD, a deck, a report, a spec, an artifact | `prd-spec-writer`, `stakeholder-deck-builder`, `competitive-research-report`, `pol-probe` |
 | 🧭 **Guides it** | Walks you through a process step by step and drafts the pieces along the way | `discovery-process`, `roadmap-planning`, `writing-plans`, `test-driven-development` |
 | 🔍 **Checks it** | Reviews something that already exists and reports gaps, risks, or slop | `checker-agent`, `avoid-ai-writing`, `requesting-code-review`, `antislop` |
 | 🤔 **Questions you** | Asks you the hard questions instead of giving an answer | `decision-partner`, `decision-review`, `reflection-partner`, `practice-partner` |
 | 🎓 **Coaches you** | Teaches a skill over time and adapts to your level | `chess-coach`, `french-tutor`, `canadian-financial-modeler` |
 | ⚙️ **Runs the setup** | Maintains the skills library, settings, routines, and memory | `publish-skill-to-github`, `backup-claude-setup`, `self-improve`, `riley-context` |
 
-**Where each skill lives:** **Hub** = this repo · **PM** = [riley-pm-skills](https://github.com/rileytrottier23/riley-pm-skills) · **Coding** = [riley-coding-skills](https://github.com/rileytrottier23/riley-coding-skills) · **Thinking** = [riley-thinking-skills](https://github.com/rileytrottier23/riley-thinking-skills) · **Account** = kept in the Claude account only, on purpose, because it holds personal details that don't belong in a public repo. A † after the name marks a vendored skill (someone else's work, pinned upstream).
+**Where each skill lives:** **Hub** = this repo · **PM** = [riley-pm-skills](https://github.com/rileytrottier23/riley-pm-skills) · **Coding** = [riley-coding-skills](https://github.com/rileytrottier23/riley-coding-skills) · **Thinking** = [riley-thinking-skills](https://github.com/rileytrottier23/riley-thinking-skills) · **Account** = kept in the Claude account only, on purpose, because it holds personal details that don't belong in a public repo · **Private** = kept in a private repo because it's specific to my day job. A † after the name marks a vendored skill (someone else's work, pinned upstream).
 
 ---
 
@@ -25,8 +25,8 @@ phrase in the last column and Claude loads the matching one.
 |---|---|---|---|
 | **Product docs & specs** | | | |
 | Write a PRD, spec, feature brief, or one-pager | `prd-spec-writer` · PM | 🛠️ Makes it | "Help me write up this feature" · "Spec out this idea" |
-| Write or revise a Workday FDD or PRD section in house style | `fdd-writer` · PM | 🛠️ Makes it | "Write the FDD" · "Draft the Develop section" · "Create a Topic 101" |
-| Turn a standalone business rule into a decision table and Given/When/Then criteria | `deterministic-logic-spec` · PM | 🛠️ Makes it | "Spec this rule" · "Decision table for X" · "Edge cases for this rule" |
+| Write or revise an FDD or PRD section in house style | `fdd-writer` · Private | 🛠️ Makes it | "Write the FDD" · "Draft the Develop section" · "Create a Topic 101" |
+| Turn a standalone business rule into a decision table and Given/When/Then criteria | `deterministic-logic-spec` · Private | 🛠️ Makes it | "Spec this rule" · "Decision table for X" · "Edge cases for this rule" |
 | Write user stories with Gherkin acceptance criteria | `user-story`† · PM | 🛠️ Makes it | "Write a user story for…" · "Convert this requirement into a story" |
 | Co-author a doc, proposal, or decision doc in structured rounds | `doc-coauthoring`† · Thinking | 🧭 Guides it | "Help me write a proposal" · "Let's draft this spec together" |
 | **Strategy & planning** | | | |
@@ -98,7 +98,7 @@ phrase in the last column and Claude loads the matching one.
 | Contrast, keyboard, focus, and state accessibility | `antislop-human`† · Coding | 🔍 Checks it | "Check accessibility" · "Is this contrast OK?" |
 | Remove generic AI comments without touching code | `antislop-code`† · Coding | 🔍 Checks it | "Clean up the comments in this file" |
 | **Skills & setup** | | | |
-| Load your Workday role, projects, and preferences | `riley-context` · Account | ⚙️ Runs the setup | "Load my context" · *(fires on Workday, Revenue Center, FDD topics)* |
+| Load your work role, projects, and preferences | `riley-context` · Account | ⚙️ Runs the setup | "Load my context" · *(fires on day-job topics)* |
 | Lay out replies to scan: answer first, task lists, tables, scorecards, diagrams | `visual-output` · Thinking | ⚙️ Runs the setup | *(fires on any reply with more than one part)* |
 | Spot work that fits Claude Code or Cowork better and write a handoff file | `code-cowork-handoff` · Coding | ⚙️ Runs the setup | "Hand this off to Claude Code" · "Should this be in Cowork?" |
 | Publish a new or edited skill to the right repo | `publish-skill-to-github` · Thinking | ⚙️ Runs the setup | "Push this skill" · "Sync my skills" · "Update the skills README" |
