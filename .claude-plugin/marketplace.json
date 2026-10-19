@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place, plus the control-plane tooling that backs up routines and settings and captures cross-session learnings. Each domain plugin is sourced from its home repo.",
-    "version": "2.5.0"
+    "version": "2.5.1"
   },
   "plugins": [
     {
@@ -18,7 +18,7 @@
     },
     {
       "name": "riley-pm-skills",
-      "description": "Riley's own product-management skills: PRD, FDD, and business-rule spec writing, stakeholder decks, competitive research reports.",
+      "description": "Riley's own product-management skills: PRD and spec writing, stakeholder decks, competitive research reports.",
       "source": { "source": "github", "repo": "rileytrottier23/riley-pm-skills" },
       "strict": false,
       "skills": ["./mine/"]
