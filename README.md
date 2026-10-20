@@ -105,5 +105,3 @@ their own license files, which govern.
 
 - [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server): a remote MCP server with
   OAuth 2.0, pulled out of my ReflectAI journaling app.
-- [agent-eval-harness](https://github.com/rileytrottier23/agent-eval-harness): scorecards and regression
-  checks for AI agents.
