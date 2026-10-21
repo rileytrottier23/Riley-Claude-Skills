@@ -2,6 +2,9 @@
 
 Newest first.
 
+- 2026-10-21 — Dropped the vendored `avoid-ai-writing` plugin. `avoid-ai-writing` is now Riley's own skill
+  (blader/humanizer plus his voice profile) inside the `riley-thinking-skills` plugin. 12 plugins.
+
 - 2026-10-15 — Routine backups (`routines/`) and `scripts/format_routines.py` moved to a private repo.
   `backup-claude-setup` now writes routines there and only settings here. Routine prompts describe which
   personal sources Claude reads, so they no longer belong in a public repo.

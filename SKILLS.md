@@ -49,7 +49,7 @@ phrase in the last column and Claude loads the matching one.
 | Write a status report, leadership update, FAQ, or incident report | `internal-comms`† · Thinking | 🛠️ Makes it | "Write the weekly update" · "Draft the incident report" |
 | **Writing quality** | | | |
 | Tighten any prose with Strunk's rules | `writing-clearly-and-concisely`† · Thinking | 🔍 Checks it | "Make this clearer" · "Tighten this up" |
-| Strip AI-isms from a draft | `avoid-ai-writing`† · Thinking | 🔍 Checks it | "Make this sound less like AI" · "Audit this for AI tells" |
+| Strip AI-isms from a draft | `avoid-ai-writing` · Thinking | 🔍 Checks it | "Make this sound less like AI" · "Audit this for AI tells" |
 | Remove generic AI patterns from headlines, CTAs, and copy | `antislop-copywriting`† · Coding | 🔍 Checks it | "Rewrite this landing copy" · "This headline sounds generic" |
 | **Review before shipping** | | | |
 | Second pass on any artifact for gaps, errors, and risk | `checker-agent` · Thinking | 🔍 Checks it | "Check this" · "Is this ready to send?" · "What could go wrong?" |

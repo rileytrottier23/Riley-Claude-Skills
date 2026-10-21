@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place, plus the control-plane tooling that backs up routines and settings and captures cross-session learnings. Each domain plugin is sourced from its home repo.",
-    "version": "2.5.1"
+    "version": "2.6.0"
   },
   "plugins": [
     {
@@ -67,7 +67,7 @@
     },
     {
       "name": "riley-thinking-skills",
-      "description": "Riley's own thinking and general skills: decision-partner, decision-review, practice-partner, reflection-partner, Canadian personal-finance modelling, chess coaching, Quebec French tutoring, a pre-ship quality checker, a broken-integration diagnostician, a reply-layout guide (visual-output), and the skill-publishing tool.",
+      "description": "Riley's own thinking and general skills: decision-partner, decision-review, practice-partner, reflection-partner, Canadian personal-finance modelling, chess coaching, Quebec French tutoring, a pre-ship quality checker, a broken-integration diagnostician, a reply-layout guide (visual-output), an AI-writing cleanup tuned to Riley's voice (avoid-ai-writing), and the skill-publishing tool.",
       "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
       "strict": false,
       "skills": ["./mine/"]
@@ -85,13 +85,6 @@
       "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
       "strict": false,
       "skills": ["./vendored/obra-elements-of-style/"]
-    },
-    {
-      "name": "avoid-ai-writing",
-      "description": "Conor Bronsdon's avoid-ai-writing (MIT): audits and rewrites prose to strip AI writing patterns, with detect, rewrite, and edit modes and voice profiles.",
-      "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
-      "strict": false,
-      "skills": ["./vendored/conorbronsdon-avoid-ai-writing/"]
     },
     {
       "name": "diagram-design",
