@@ -5,7 +5,9 @@ get all three, plus a small plugin that backs up my Claude Code settings. See
 [Control plane](#control-plane-keep-the-whole-setup-in-git).
 
 Each skill is a folder containing a `SKILL.md`: an instruction set Claude loads when its description
-matches what you're asking for. They work in Claude Projects, Claude Code, and Cowork. Each repo below is
+matches what you're asking for. They follow the open Agent Skills standard, which Anthropic
+[donated to the Agentic AI Foundation](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)
+(the Linux Foundation group that also runs MCP) in October 2026. They work in Claude Projects, Claude Code, and Cowork. Each repo below is
 also a standalone plugin marketplace, so you can install a whole domain on its own and `git pull` picks up
 updates.
 
