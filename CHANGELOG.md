@@ -2,8 +2,20 @@
 
 Newest first.
 
+- 2026-11-04 — Weekly tidy. Backfilled the changelog entries below for 2026-10-19 and 2026-10-28. In
+  riley-thinking-skills, the `avoid-ai-writing` sensitivity check no longer names a specific employer.
+  No duplicate skills found across the four repos; marketplace, README counts and `SKILLS.md` all match.
+
+- 2026-10-28 — README notes that the skills follow the open Agent Skills standard, now at the Agentic AI
+  Foundation.
+
 - 2026-10-21 — Dropped the vendored `avoid-ai-writing` plugin. `avoid-ai-writing` is now Riley's own skill
   (blader/humanizer plus his voice profile) inside the `riley-thinking-skills` plugin. 12 plugins.
+
+- 2026-10-19 — `fdd-writer` and `deterministic-logic-spec` moved from riley-pm-skills to a private repo;
+  `SKILLS.md` marks them Private and no longer carries employer details. README intro shortened and skill
+  counts fixed (16 / 27 / 22). `riley-pm-skills` plugin description updated. `backup-claude-setup` synced
+  with the saved copy. README no longer links the agent-eval-harness repo (now private).
 
 - 2026-10-15 — Routine backups (`routines/`) and `scripts/format_routines.py` moved to a private repo.
   `backup-claude-setup` now writes routines there and only settings here. Routine prompts describe which
