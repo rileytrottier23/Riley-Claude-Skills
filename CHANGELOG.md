@@ -2,6 +2,10 @@
 
 Newest first.
 
+- 2026-11-23 — Weekly tidy. riley-pm-skills: Dean Peters skills re-synced to upstream v0.86 (merged).
+  riley-coding-skills: `antislop` re-synced to upstream v3.2.32 (merged). A private repo: draft PR to
+  remove a duplicate skill backup. Marketplace, README counts and `SKILLS.md` all match; 16 / 27 / 22 skills.
+
 - 2026-11-04 — Weekly tidy. Backfilled the changelog entries below for 2026-10-19 and 2026-10-28. In
   riley-thinking-skills, the `avoid-ai-writing` sensitivity check no longer names a specific employer.
   No duplicate skills found across the four repos; marketplace, README counts and `SKILLS.md` all match.
