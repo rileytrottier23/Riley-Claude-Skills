@@ -19,7 +19,7 @@ what you're trying to do, with its kind and the phrases that trigger it.
 | Repo | What's in it | Skills |
 |---|---|---|
 | [**riley-pm-skills**](https://github.com/rileytrottier23/riley-pm-skills) | Product & PM: PRDs and specs, stakeholder decks, competitive research, plus vendored PM collection (Dean Peters) | 15 |
-| [**riley-coding-skills**](https://github.com/rileytrottier23/riley-coding-skills) | Coding & engineering: TDD, debugging, planning, code review, git worktrees (superpowers), MCP building, frontend/webapp tooling, anti-slop filters | 26 |
+| [**riley-coding-skills**](https://github.com/rileytrottier23/riley-coding-skills) | Coding & engineering: TDD, debugging, planning, code review, git worktrees (superpowers), MCP building, frontend/webapp tooling, anti-slop filters, Windows shell traps | 27 |
 | [**riley-thinking-skills**](https://github.com/rileytrottier23/riley-thinking-skills) | Everything else: decision/reflection/practice partners, personal-life modelling, writing & comms, AI-writing cleanup, pre-ship checks, integration debugging, creative/design, and the skill-publishing tool | 19 |
 
 Each repo splits its skills into **`mine/`** (my own work, MIT) and **`vendored/`** (other people's,
@@ -28,7 +28,7 @@ answerable at a glance.
 
 ## Install
 
-**Everything, from this hub** (one marketplace, all 11 plugins: the domain plugins sourced from the three
+**Everything, from this hub** (one marketplace, all 12 plugins: the domain plugins sourced from the three
 repos, plus the hub's own `riley-control-plane`):
 
 ```

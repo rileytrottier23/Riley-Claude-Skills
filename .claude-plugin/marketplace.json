@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place, plus the control-plane tooling that backs up routines and settings and captures cross-session learnings. Each domain plugin is sourced from its home repo.",
-    "version": "2.7.0"
+    "version": "2.8.0"
   },
   "plugins": [
     {
@@ -50,6 +50,13 @@
       "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
       "strict": false,
       "skills": ["./vendored/miqdadbadjuber-antislop/"]
+    },
+    {
+      "name": "windows-agent-shell",
+      "description": "Paweł Huryn's windows-agent-shell (MIT): Git Bash path rewriting, PowerShell quoting and encoding, CRLF and Claude Code auto mode traps for coding agents on Windows.",
+      "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
+      "strict": false,
+      "skills": ["./vendored/phuryn-product-engineering/"]
     },
     {
       "name": "riley-coding-skills",

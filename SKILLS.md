@@ -90,6 +90,7 @@ phrase in the last column and Claude loads the matching one.
 | Build an MCP server | `mcp-builder`† · Coding | 🧭 Guides it | "Build an MCP server for the X API" |
 | Claude API and SDK reference: models, pricing, tool use, caching | `claude-api`† · Coding | 🎓 Coaches you | "Which Claude model should I use?" · "Add prompt caching" |
 | Core anti-slop rules for any AI-built UI, copy, or code | `antislop`† · Coding | 🔍 Checks it | *(loads with any antislop sub-skill)* |
+| Avoid Windows shell traps: Git Bash paths, PowerShell quoting and encoding, CRLF | `windows-agent-shell`† · Coding | 🔍 Checks it | "Output came back garbled" · "Works here, breaks on Windows" |
 | Anti-slop for color, layout, components, motion | `antislop-ui`† · Coding | 🔍 Checks it | "Build the settings page" · "Clean up this UI" |
 | Anti-slop for layouts that reflow phone to desktop | `antislop-layoutmobile`† · Coding | 🔍 Checks it | "Make this work on mobile" · "Fix the overflow" |
 | Contrast, keyboard, focus, and state accessibility | `antislop-human`† · Coding | 🔍 Checks it | "Check accessibility" · "Is this contrast OK?" |

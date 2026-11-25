@@ -2,6 +2,8 @@
 
 Newest first.
 
+- 2026-11-25 — Added the `windows-agent-shell` plugin (riley-coding-skills, vendored from phuryn/product-engineering, MIT). 15 / 27 / 19 skills.
+
 - 2026-11-25 — Skills review. Dropped the `pm-skills-digidai` plugin (removed from riley-pm-skills), `code-cowork-handoff` (riley-coding-skills) and the vendored `algorithmic-art`, `brand-guidelines` and `slack-gif-creator` (riley-thinking-skills); updated plugin descriptions and `SKILLS.md`. Rewrote trigger descriptions for chess-coach, decision-partner, visual-output and using-superpowers. 15 / 26 / 19 skills.
 
 - 2026-11-23 — Weekly tidy. riley-pm-skills: Dean Peters skills re-synced to upstream v0.86 (merged).
