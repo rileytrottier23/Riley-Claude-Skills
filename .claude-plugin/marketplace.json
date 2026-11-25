@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Aggregator marketplace: installs every Riley skill from the three domain repos (pm, coding, thinking) in one place, plus the control-plane tooling that backs up routines and settings and captures cross-session learnings. Each domain plugin is sourced from its home repo.",
-    "version": "2.6.0"
+    "version": "2.7.0"
   },
   "plugins": [
     {
@@ -31,13 +31,6 @@
       "skills": ["./vendored/deanpeters-product-manager-skills/"]
     },
     {
-      "name": "pm-skills-digidai",
-      "description": "Gene Dai's product-manager-skills (CC BY-NC-SA 4.0): SaaS metrics diagnosis, PRD critique, PLG growth strategy, PM career coaching.",
-      "source": { "source": "github", "repo": "rileytrottier23/riley-pm-skills" },
-      "strict": false,
-      "skills": ["./vendored/digidai-product-manager-skills/"]
-    },
-    {
       "name": "superpowers",
       "description": "Jesse Vincent's superpowers (MIT): a coding-agent methodology in 14 skills — TDD, systematic debugging, planning, code review, git worktrees. Named 'superpowers' so the skills' internal cross-references resolve.",
       "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
@@ -60,7 +53,7 @@
     },
     {
       "name": "riley-coding-skills",
-      "description": "Riley's own coding skills: code-cowork-handoff (spots Code vs Cowork work and writes a handoff file) and vibe-design-loop (pushes AI-generated UI past the generic look).",
+      "description": "Riley's own coding skills: vibe-design-loop (pushes AI-generated UI past the generic look).",
       "source": { "source": "github", "repo": "rileytrottier23/riley-coding-skills" },
       "strict": false,
       "skills": ["./mine/"]
@@ -74,7 +67,7 @@
     },
     {
       "name": "anthropic-example-skills",
-      "description": "Example skills from anthropics/skills (Apache 2.0): doc co-authoring, internal comms, algorithmic art, brand guidelines, theme factory, Slack GIF creator, Claude Academy guide, discernment nudge.",
+      "description": "Example skills from anthropics/skills (Apache 2.0): doc co-authoring, internal comms, theme factory, Claude Academy guide, discernment nudge.",
       "source": { "source": "github", "repo": "rileytrottier23/riley-thinking-skills" },
       "strict": false,
       "skills": ["./vendored/anthropic/"]

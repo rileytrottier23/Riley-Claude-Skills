@@ -64,11 +64,8 @@ phrase in the last column and Claude loads the matching one.
 | Improve at chess (700 → 1000+ Elo) | `chess-coach` · Thinking | 🎓 Coaches you | "Why did I lose this game?" · "Teach me an opening" |
 | Practice Quebec French | `french-tutor` · Thinking | 🎓 Coaches you | "How do I say X in French?" · "Let's do some French practice" |
 | **Creative & design** | | | |
-| Generative art with p5.js | `algorithmic-art`† · Thinking | 🛠️ Makes it | "Make generative art" · "Flow field of…" |
-| Animated GIF sized for Slack | `slack-gif-creator`† · Thinking | 🛠️ Makes it | "Make me a GIF of X for Slack" |
 | Apply a preset or custom theme to slides, docs, or pages | `theme-factory`† · Thinking | 🛠️ Makes it | "Theme this deck" · "Give this a different look" |
 | Branded diagrams and charts as HTML/SVG: architecture, flowcharts, sequence, Gantt, Sankey and more | `diagram-design`† · Thinking | 🛠️ Makes it | "Diagram this architecture" · "Make a flowchart of…" |
-| Apply Anthropic brand colors and type | `brand-guidelines`† · Thinking | 🛠️ Makes it | "Use Anthropic branding on this" |
 | Find a Claude Academy course for a how-to question | `claude-academy-guide`† · Thinking | 🎓 Coaches you | "How do I use Claude Projects?" · "Getting started with Claude Code" |
 | **Coding: plan & build** | | | |
 | Explore intent and design before building anything | `brainstorming`† · Coding | 🧭 Guides it | "I want to add a feature that…" · "Let's build X" |
@@ -100,7 +97,6 @@ phrase in the last column and Claude loads the matching one.
 | **Skills & setup** | | | |
 | Load your work role, projects, and preferences | `riley-context` · Account | ⚙️ Runs the setup | "Load my context" · *(fires on day-job topics)* |
 | Lay out replies to scan: answer first, task lists, tables, scorecards, diagrams | `visual-output` · Thinking | ⚙️ Runs the setup | *(fires on any reply with more than one part)* |
-| Spot work that fits Claude Code or Cowork better and write a handoff file | `code-cowork-handoff` · Coding | ⚙️ Runs the setup | "Hand this off to Claude Code" · "Should this be in Cowork?" |
 | Publish a new or edited skill to the right repo | `publish-skill-to-github` · Thinking | ⚙️ Runs the setup | "Push this skill" · "Sync my skills" · "Update the skills README" |
 | Back up or restore routines and settings | `backup-claude-setup` · Hub | ⚙️ Runs the setup | "Back up my Claude setup" · "Restore my routines" |
 | Capture a lesson so Claude doesn't repeat a mistake | `self-improve` · Hub | ⚙️ Runs the setup | "Remember this" · "Don't make that mistake again" |

@@ -2,6 +2,8 @@
 
 Newest first.
 
+- 2026-11-25 — Skills review. Dropped the `pm-skills-digidai` plugin (removed from riley-pm-skills), `code-cowork-handoff` (riley-coding-skills) and the vendored `algorithmic-art`, `brand-guidelines` and `slack-gif-creator` (riley-thinking-skills); updated plugin descriptions and `SKILLS.md`. Rewrote trigger descriptions for chess-coach, decision-partner, visual-output and using-superpowers. 15 / 26 / 19 skills.
+
 - 2026-11-23 — Weekly tidy. riley-pm-skills: Dean Peters skills re-synced to upstream v0.86 (merged).
   riley-coding-skills: `antislop` re-synced to upstream v3.2.32 (merged). A private repo: draft PR to
   remove a duplicate skill backup. Marketplace, README counts and `SKILLS.md` all match; 16 / 27 / 22 skills.
